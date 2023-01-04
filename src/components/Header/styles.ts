@@ -23,6 +23,10 @@ export const MainTitle = styled.header<iTitleHeader>`
     color: ${(props) => props.color};
     font-family: var(--font-family-3);
     font-size: var(--title-header-mobile);
+
+    @media (min-width: 1024px) {
+      font-size: var(--title-header);
+    }
   }
 
   @media (min-width: 1024px) {
