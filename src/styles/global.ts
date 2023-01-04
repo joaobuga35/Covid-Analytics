@@ -22,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     --font-family-3: 'Dhurjati', sans-serif;
 
     --title-header:70px;
+    --title-header-mobile:50px;
     --title-1: 40px;
     --title-2: 30px;
     --name-states:12px;
@@ -31,7 +32,6 @@ export const GlobalStyle = createGlobalStyle`
     --radius-1:2px;
     --radius-2:5px;
     --radius-3: 30px;
-    
   }
     
 `;
