@@ -1,4 +1,4 @@
-import { LoginStyled } from "./LoginStyle";
+import { LoginStyled } from "./styles";
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";

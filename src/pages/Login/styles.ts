@@ -17,12 +17,10 @@ export const LoginStyled = styled.div`
 
   .titleLoguin {
     color: var(--white);
-
     font-size: var(--title-1);
     text-align: center;
     margin-bottom: 16px;
     font-weight: 900;
-
     font-family: "inter";
   }
 
@@ -32,7 +30,6 @@ export const LoginStyled = styled.div`
     backdrop-filter: blur(10px);
     border-radius: var(--radius-3);
     border: 1px solid rgba(255, 255, 255, 0.18);
-
     display: flex;
     flex-direction: column;
     gap: 20px;
