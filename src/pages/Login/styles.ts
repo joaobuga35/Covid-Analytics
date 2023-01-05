@@ -15,7 +15,7 @@ export const LoginStyled = styled.div`
   align-items: center;
   flex-direction: column;
 
-   h1 {
+  h1 {
     color: var(--white);
     font-size: var(--title-1);
     text-align: center;
@@ -40,7 +40,7 @@ export const LoginStyled = styled.div`
       font-size: var(--font-button);
       font-family: "inter";
     }
-     span {
+    span {
       color: var(--black);
       font-size: var(--name-states);
       font-weight: 400;
@@ -55,10 +55,9 @@ export const LoginStyled = styled.div`
       cursor: pointer;
       font-family: "inter";
       font-size: var(--font-button);
-      color:var(--white);
+      color: var(--white);
     }
   }
-
 
   @media (max-width: 768px) {
     form {
