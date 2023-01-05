@@ -7,7 +7,8 @@ export const SectionStyle = styled.section`
   flex-direction: column;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 15px 26px;
-  width: 220px;
+  width: 100%;
+
   > h2 {
     color: var(--gray-3);
     font-family: var(--font-family-1);
@@ -16,6 +17,7 @@ export const SectionStyle = styled.section`
     text-align: center;
     margin-bottom: 20px;
   }
+
   > picture {
     display: flex;
     justify-content: center;
@@ -24,5 +26,9 @@ export const SectionStyle = styled.section`
   table {
     margin-bottom: 100px;
     background-color: var(--white);
+  }
+
+  @media(min-width: 1024px) {
+    width: 225px;
   }
 `;
