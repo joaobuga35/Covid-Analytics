@@ -1,9 +1,10 @@
 import { MainTitle } from "./styles";
 import logo from "../../assets/logoOficial.png";
+import { iTitleHeader } from "./types";
 
-export function Header() {
+export function Header({colorTitle, marginTop}: iTitleHeader) {
   return (
-    <MainTitle>
+    <MainTitle colorTitle={colorTitle} marginTop={marginTop}>
       <div>
         <img src={logo} alt="logo" />
       </div>
