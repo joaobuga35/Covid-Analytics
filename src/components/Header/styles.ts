@@ -1,9 +1,5 @@
 import styled from "styled-components";
-
-interface iTitleHeader {
-  colorTitle?: string;
-  marginTop?: string;
-}
+import { iTitleHeader } from "./types";
 
 export const MainTitle = styled.header<iTitleHeader>`
   display: flex;
