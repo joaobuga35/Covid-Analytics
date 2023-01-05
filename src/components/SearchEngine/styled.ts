@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 
 export const StyledSearch = styled.section`
-    background: var(--gray-1);
+    
+    background-color: var(--gray-1);
     min-height: 568px;
     max-width:675px;
     width: 50%;
     margin: 0 auto;
     padding: 16px 48px 0px 48px;
     border-radius: var(--radius-3);
+    
     h2{
         
         font-family: var(--font-family-1);
