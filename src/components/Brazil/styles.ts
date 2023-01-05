@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BrazilStyle = styled.section`
+export const SectionStyle = styled.section`
   background-color: var(--gray-1);
   border-radius: var(--radius-3);
   display: flex;

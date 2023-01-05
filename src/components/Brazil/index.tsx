@@ -3,7 +3,7 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { BrazilStyle } from "./styles";
+import { SectionStyle } from "./styles";
 import brazilMap from "../../assets/brazilMap.svg";
 
 export function Brazil() {
@@ -30,7 +30,7 @@ export function Brazil() {
     },
   ];
   return (
-    <BrazilStyle>
+    <SectionStyle>
       <h2>Brasil</h2>
       <TableContainer>
         <Table>
@@ -47,6 +47,6 @@ export function Brazil() {
       <picture>
         <img src={brazilMap} alt="Mapa do Brasil" />
       </picture>
-    </BrazilStyle>
+    </SectionStyle>
   );
 }
