@@ -6,6 +6,7 @@ export const MainTitle = styled.header<iTitleHeader>`
   flex-direction: column;
   align-items: center;
   margin-top: ${(props) => props.marginTop};
+
   div {
     display: flex;
     justify-content: center;
@@ -15,6 +16,7 @@ export const MainTitle = styled.header<iTitleHeader>`
     border-radius: 100%;
     background-color: var(--gray-trans);
   }
+
   h1 {
     color: ${(props) => props.color};
     font-family: var(--font-family-3);
