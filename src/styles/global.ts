@@ -33,5 +33,5 @@ export const GlobalStyle = createGlobalStyle`
     --radius-3: 30px;
     
   }
-    
+  
 `;
