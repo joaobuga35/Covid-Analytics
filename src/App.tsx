@@ -6,8 +6,6 @@ export function App() {
   return (
     <>
       <GlobalStyle/>
-      <Register/>
-
     </>
   );
 }
