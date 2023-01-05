@@ -5,7 +5,6 @@ export const SectionStyle = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-
   width: 250px;
   height: 100vh;
 
@@ -22,7 +21,6 @@ export const SectionStyle = styled.section`
     display: flex;
     align-items: center;
     flex-direction: column;
-
     border-radius: var(--radius-3);
     padding: 32px 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -39,7 +37,6 @@ export const UserStyle = styled.div`
     border: 6px solid white;
     overflow: hidden;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-
     display: flex;
     justify-content: center;
 
@@ -51,6 +48,7 @@ export const UserStyle = styled.div`
     :hover {
       transition: 0.3s;
       border-color: rgba(0, 0, 0, 0.01);
+
       img {
         transition: 0.3s;
         transform: scale(1.05);
@@ -60,13 +58,13 @@ export const UserStyle = styled.div`
 `;
 
 export const UserFavorite = styled.div`
-    ul {
-        max-height: 150px;
-        width: 80%;
-        margin-top: 3ch;
-        display: flex;
-        flex-direction: column;
-        gap: 1ch;
-        overflow-y: auto;
-    }
+  ul {
+    max-height: 150px;
+    width: 80%;
+    margin-top: 3ch;
+    display: flex;
+    flex-direction: column;
+    gap: 1ch;
+    overflow-y: auto;
+  }
 `;

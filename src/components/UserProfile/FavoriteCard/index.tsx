@@ -1,13 +1,15 @@
 import { FavoriteCardStyle } from "./styles";
-import {AiOutlineEye} from "react-icons/ai"
-import { favCartTypes } from "./interfaces";
+import { AiOutlineEye } from "react-icons/ai";
+import { iFavCartTypes } from "./types";
 
 // Faltou a key
-export function FavoriteCard({name}: favCartTypes) {
+export function FavoriteCard({ name }: iFavCartTypes) {
   return (
     <FavoriteCardStyle>
       <h3>{name}</h3>
-      <button><AiOutlineEye /></button>
+      <button>
+        <AiOutlineEye />
+      </button>
     </FavoriteCardStyle>
   );
 }

@@ -16,7 +16,9 @@ export function UserProfile() {
       <UserFavorite>
         <h2>Favoritos</h2>
         <ul>
-          {favoriteExampleList.map((value) => <FavoriteCard name={value}/>)}
+          {favoriteExampleList.map((value) => (
+            <FavoriteCard name={value} />
+          ))}
         </ul>
       </UserFavorite>
     </SectionStyle>
