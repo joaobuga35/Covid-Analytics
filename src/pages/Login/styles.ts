@@ -15,7 +15,7 @@ export const LoginStyled = styled.div`
   align-items: center;
   flex-direction: column;
 
-  .titleLoguin {
+   h1 {
     color: var(--white);
     font-size: var(--title-1);
     text-align: center;
@@ -25,7 +25,7 @@ export const LoginStyled = styled.div`
   }
 
   form {
-    padding: 25px 20px;
+    padding: 30px 20px;
     background: rgba(330, 330, 330, 0.25);
     backdrop-filter: blur(10px);
     border-radius: var(--radius-3);
@@ -36,38 +36,29 @@ export const LoginStyled = styled.div`
     width: 40%;
     text-align: center;
 
-    .button {
+    Button {
       font-size: var(--font-button);
       font-family: "inter";
     }
+     span {
+      color: var(--black);
+      font-size: var(--name-states);
+      font-weight: 400;
+      font-family: "inter";
+    }
+    Input {
+      background-color: white;
+      font-family: "inter";
+    }
+    a {
+      text-align: center;
+      cursor: pointer;
+      font-family: "inter";
+      font-size: var(--font-button);
+      color:var(--white);
+    }
   }
 
-  .spanQuestion {
-    color: var(--black);
-    font-size: var(--name-states);
-    font-weight: 400;
-    font-family: "inter";
-  }
-
-  label {
-    text-align: start;
-    cursor: pointer;
-    font-family: "inter";
-    font-size: var(--label);
-  }
-
-  .InputForm {
-    background-color: white;
-    font-family: "inter";
-  }
-
-  .Link {
-    text-align: center;
-    cursor: pointer;
-    font-family: "inter";
-    font-size: var(--font-button);
-    color: #0083d1;
-  }
 
   @media (max-width: 768px) {
     form {
