@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import {Header } from "../../components/Header"
 
 export function Register() {
   const brazilStates = [
@@ -43,6 +44,7 @@ export function Register() {
 
   return (
     <RegisterStyled>
+      <Header colorTitle="--white" marginTop="1rem"/>
       <h1>Registro</h1>
       <form>
         <TextField id="email" label="email" variant="filled" />
