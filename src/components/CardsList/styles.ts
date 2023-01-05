@@ -5,9 +5,11 @@ export const ListStyle = styled.ul`
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 26px;
+  padding-bottom:5px;
   row-gap: 20px;
+  overflow-y: auto;
+  max-height:428px;
   
-
   h2 {
     font-family: var(--font-family-1);
     font-size: var(--name-states);
@@ -25,18 +27,19 @@ export const ListStyle = styled.ul`
     box-shadow: 0px 4px 4px 0px #00000040;
     border-radius: var(--radius-2);
   }
+
   table {
     background-color: var(--white);
   }
   
-  .MuiTableCell-body {
+  /* .MuiTableCell-body {
     border: none;
     padding: 5px 0;
     font-family: var(--font-family-1);
     font-size: var(--name-states);
     font-weight: 400;
     color: var(--gray-2);
-  }
+  } */
 
   button {
     width: 100%;

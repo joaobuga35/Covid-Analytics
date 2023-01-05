@@ -1,7 +1,7 @@
-import { StyledSearch } from "./styled";
+import { StyledSearch } from "./styles";
 import { Button } from "@mui/material";
 import { IoIosSearch } from "react-icons/io";
-import { ListCard } from "../CardsList/indexs";
+import { ListCard } from "../CardsList";
 
 export function SearchEngine(){
 
@@ -15,8 +15,6 @@ export function SearchEngine(){
             <main>
                 <ListCard/>
             </main>
-
         </StyledSearch>
-    )
-
+    );
 }
