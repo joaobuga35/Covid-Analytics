@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 import background from "../../assets/background.jpg";
 
-export const LoginStyled = styled.div`
+export const RegisterStyled = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 160vh;
   background-image: url(${background});
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: right center;
   background-attachment: fixed;
   background-size: 150% 150%;
   display: flex;
@@ -21,7 +21,7 @@ export const LoginStyled = styled.div`
     text-align: center;
     margin-bottom: 16px;
     font-weight: 900;
-    font-family: "inter";
+    font-family:var(--font-family-1);
   }
 
   form {
@@ -36,26 +36,38 @@ export const LoginStyled = styled.div`
     width: 40%;
     text-align: center;
 
-    Button {
+    button {
       font-size: var(--font-button);
-      font-family: "inter";
+      font-family:var(--font-family-1);
     }
     span {
       color: var(--black);
       font-size: var(--name-states);
       font-weight: 400;
-      font-family: "inter";
+      font-family:var(--font-family-1);
     }
-    Input {
+    input {
       background-color: white;
-      font-family: "inter";
+      
     }
+
     a {
       text-align: center;
       cursor: pointer;
-      font-family: "inter";
+      font-family:var(--font-family-1);
       font-size: var(--font-button);
       color: var(--white);
+    }
+
+    div {
+      background-color: white;
+     
+    }
+
+    select {
+      background-color: white;
+      padding-left: 1rem;
+      padding-bottom: 1rem;
     }
   }
 
