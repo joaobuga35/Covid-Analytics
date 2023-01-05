@@ -7,32 +7,40 @@ import { BrazilStyle } from "./styles";
 import brazilMap from "../../assets/brazilMap.svg";
 
 export function Brazil() {
+  const brazilData = [
+    {
+      name: "Casos",
+      value: 1000,
+    },
+    {
+      name: "Confirmados",
+      value: 982,
+    },
+    {
+      name: "Mortes",
+      value: 466464,
+    },
+    {
+      name: "Recuperados",
+      value: 797,
+    },
+    {
+      name: "Suspeitos",
+      value: 798543,
+    },
+  ];
   return (
     <BrazilStyle>
       <h2>Brasil</h2>
       <TableContainer>
         <Table>
           <TableBody>
-            <TableRow key={0}>
-              <TableCell>Casos</TableCell>
-              <TableCell align="right">1000</TableCell>
-            </TableRow>
-            <TableRow key={1}>
-              <TableCell>Confirmados</TableCell>
-              <TableCell align="right">982</TableCell>
-            </TableRow>
-            <TableRow key={2}>
-              <TableCell>Mortes</TableCell>
-              <TableCell align="right">694411</TableCell>
-            </TableRow>
-            <TableRow key={3}>
-              <TableCell>Recuperados</TableCell>
-              <TableCell align="right">46454</TableCell>
-            </TableRow>
-            <TableRow key={4}>
-              <TableCell>Suspeitos</TableCell>
-              <TableCell align="right">54564</TableCell>
-            </TableRow>
+            {brazilData.map((info, index) => (
+              <TableRow key={index}>
+                <TableCell>{info.name}</TableCell>
+                <TableCell align="right">{info.value}</TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </TableContainer>
