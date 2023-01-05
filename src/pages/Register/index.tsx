@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Header } from "../../components/Header"
+import { Header } from "../../components/Header";
 
 export function Register() {
   const brazilStates = [
