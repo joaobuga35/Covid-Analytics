@@ -11,28 +11,47 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export function Register() {
+  const brazilStates = [
+    { uf: "AC", nome: "Acre" },
+    { uf: "AL", nome: "Alagoas" },
+    { uf: "AP", nome: "Amapá" },
+    { uf: "AM", nome: "Amazonas" },
+    { uf: "BA", nome: "Bahia" },
+    { uf: "CE", nome: "Ceará" },
+    { uf: "DF", nome: "Distrito Federal" },
+    { uf: "ES", nome: "Espirito Santo" },
+    { uf: "GO", nome: "Goiás" },
+    { uf: "MA", nome: "Maranhão" },
+    { uf: "MS", nome: "Mato Grosso do Sul" },
+    { uf: "MT", nome: "Mato Grosso" },
+    { uf: "MG", nome: "Minas Gerais" },
+    { uf: "PA", nome: "Pará" },
+    { uf: "PB", nome: "Paraíba" },
+    { uf: "PR", nome: "Paraná" },
+    { uf: "PE", nome: "Pernambuco" },
+    { uf: "PI", nome: "Piauí" },
+    { uf: "RJ", nome: "Rio de Janeiro" },
+    { uf: "RN", nome: "Rio Grande do Norte" },
+    { uf: "RS", nome: "Rio Grande do Sul" },
+    { uf: "RO", nome: "Rondônia" },
+    { uf: "RR", nome: "Roraima" },
+    { uf: "SC", nome: "Santa Catarina" },
+    { uf: "SP", nome: "São Paulo" },
+    { uf: "SE", nome: "Sergipe" },
+    { uf: "TO", nome: "Tocantins" },
+  ];
+
   return (
     <RegisterStyled>
-      <h1 className="titleLoguin">Registro</h1>
-      <form className="form">
-        <TextField
-          id="email"
-          label="email"
-          variant="filled"
-          className="InputForm"
-        />
-        <TextField
-          id="name"
-          label="name"
-          variant="filled"
-          className="InputForm"
-        />
+      <h1>Registro</h1>
+      <form>
+        <TextField id="email" label="email" variant="filled" />
+        <TextField id="name" label="name" variant="filled" />
 
         <TextField
           id="password"
           label="senha"
           variant="filled"
-          className="InputForm"
           type="password"
         />
 
@@ -40,7 +59,6 @@ export function Register() {
           id="confirmPassword"
           label="Confirmação de senha"
           variant="filled"
-          className="InputForm"
           type="password"
         />
 
@@ -56,52 +74,19 @@ export function Register() {
             }}
           >
             <option value="">Selecione seu estado</option>
-            <option value="Acre">Acre</option>
-            <option value="Alagoas">Alagoas</option>
-            <option value="Amapá">Amapá</option>
-            <option value="Amazonas">Amazonas</option>
-            <option value="Bahia">Bahia</option>
-            <option value="Ceará">Ceará</option>
-            <option value="Distrito Federal">Distrito Federal</option>
-            <option value="Espírito Santo">Espírito Santo</option>
-            <option value="Goiás">Goiás</option>
-            <option value="Maranhão">Maranhão</option>
-            <option value="Mato Grosso">Mato Grosso</option>
-            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-            <option value="Minas Gerais">Minas Gerais</option>
-            <option value="Pará">Pará</option>
-            <option value="Paraíba">Paraíba</option>
-            <option value="Paraná">Paraná</option>
-            <option value="Pernambuco">Pernambuco</option>
-            <option value="Piauí">Piauí</option>
-            <option value="Rio de Janeiro">Rio de Janeiro</option>
-            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-            <option value="Rondônia">Rondônia</option>
-            <option value="Roraima">Roraima</option>
-            <option value="Santa Catarina">Santa Catarina</option>
-            <option value="São Paulo">São Paulo</option>
-            <option value="Sergipe">Sergipe</option>
-            <option value="Tocantins">Tocantins</option>
+            {brazilStates.map((ele) => (
+              <option value={ele.uf}>{ele.nome}</option>
+            ))}
           </NativeSelect>
         </FormControl>
 
-        <TextField
-          id="image"
-          label="Imagem"
-          variant="filled"
-          className="InputForm"
-        />
+        <TextField id="image" label="Imagem" variant="filled" />
 
-        <Button variant="contained" className="button">
-          Entrar
-        </Button>
+        <Button variant="contained">Cadastre-se</Button>
 
-        <span className="spanQuestion">Não possui conta?</span>
+        <span>Já possui conta?</span>
 
-        <Link to="/" className="Link">
-          Cadastre-se
-        </Link>
+        <Link to="/">Entrar</Link>
       </form>
     </RegisterStyled>
   );

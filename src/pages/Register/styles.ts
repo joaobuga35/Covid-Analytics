@@ -21,7 +21,7 @@ export const RegisterStyled = styled.div`
     text-align: center;
     margin-bottom: 16px;
     font-weight: 900;
-    font-family: "inter";
+    font-family:var(--font-family-1);
   }
 
   form {
@@ -36,37 +36,38 @@ export const RegisterStyled = styled.div`
     width: 40%;
     text-align: center;
 
-    Button {
+    button {
       font-size: var(--font-button);
-      font-family: "inter";
+      font-family:var(--font-family-1);
     }
     span {
       color: var(--black);
       font-size: var(--name-states);
       font-weight: 400;
-      font-family: "inter";
+      font-family:var(--font-family-1);
     }
-    Input {
+    input {
       background-color: white;
-      font-family: "inter";
+      
     }
 
     a {
       text-align: center;
       cursor: pointer;
-      font-family: "inter";
+      font-family:var(--font-family-1);
       font-size: var(--font-button);
       color: var(--white);
     }
 
     div {
       background-color: white;
-      font-family: "inter";
+     
     }
 
     select {
       background-color: white;
-      font-family: "inter";
+      padding-left: 1rem;
+      padding-bottom: 1rem;
     }
   }
 
