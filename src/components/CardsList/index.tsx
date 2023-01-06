@@ -4,7 +4,6 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import uuid from 'react-uuid';
 import { Button } from "@mui/material";
 
 export function ListCard(){
@@ -135,20 +134,20 @@ export function ListCard(){
         <ListStyle>
         { 
 		brazilData.map((el)=>(
-            <li key={uuid()} >
+            <li key={Math.random()} >
                 <h2>{el.state}</h2>
                <TableContainer>
                 <Table>
                 <TableBody>
-                    <TableRow key={uuid()}>
+                    <TableRow key={Math.random()}>
                         <TableCell>Mortes</TableCell>
                         <TableCell align="right">{el.deaths}</TableCell>
                     </TableRow>
-                    <TableRow key={uuid()}>
+                    <TableRow key={Math.random()}>
                         <TableCell>Casos</TableCell>
                         <TableCell align="right">{el.cases}</TableCell>
                     </TableRow>
-                    <TableRow key={uuid()}>
+                    <TableRow key={Math.random()}>
                         <TableCell>Suspeitos</TableCell>
                         <TableCell align="right">{el.suspects}</TableCell>
                     </TableRow>
