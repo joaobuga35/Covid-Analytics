@@ -1,7 +1,6 @@
 import { Brazil } from "../../components/Brazil";
-import { ListCard } from "../../components/CardsList";
 import { Header } from "../../components/Header";
-import { StyledSearch } from "../../components/SearchEngine/styles";
+import { SearchEngine } from "../../components/SearchEngine";
 import { UserProfile } from "../../components/UserProfile";
 import { DashboardStyles } from "./styles";
 
@@ -11,7 +10,7 @@ export function Dashboard() {
       <Header marginTop="8px"/>
       <main>
         <UserProfile />
-        <ListCard />
+        <SearchEngine/>
         <Brazil />
       </main>
     </DashboardStyles>
