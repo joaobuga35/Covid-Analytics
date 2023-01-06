@@ -6,135 +6,16 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import uuid from 'react-uuid';
 import { Button } from "@mui/material";
+import { useContext } from "react";
+import { SearchContext } from "../../contexts/SearchContext";
 
 export function ListCard(){
-    const brazilData = [
-        {
-			uid: 35,
-			uf: "SP",
-			state: "São Paulo",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 36,
-			uf: "MG",
-			state: "Minas Gerais",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 37,
-			uf: "MG",
-			state: "Minas Gerais",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 35,
-			uf: "SP",
-			state: "São Paulo",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 36,
-			uf: "MG",
-			state: "Minas Gerais",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 37,
-			uf: "MG",
-			state: "Minas Gerais",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 35,
-			uf: "SP",
-			state: "São Paulo",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 36,
-			uf: "MG",
-			state: "Minas Gerais",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 37,
-			uf: "MG",
-			state: "Minas Gerais",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 35,
-			uf: "SP",
-			state: "São Paulo",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 36,
-			uf: "MG",
-			state: "Minas Gerais",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
-        {
-			uid: 37,
-			uf: "MG",
-			state: "Minas Gerais",
-			cases: 6317683,
-			deaths: 177439,
-			suspects: 5334,
-			refuses: 596,
-			datetime: "2023-01-02T21:33:47.128Z"
-		},
+	const { filterList }=useContext(SearchContext);
         
-    ];
     return(
         <ListStyle>
         { 
-		brazilData.map((el)=>(
+		filterList.map((el)=>(
             <li key={uuid()} >
                 <h2>{el.state}</h2>
                <TableContainer>
@@ -155,7 +36,7 @@ export function ListCard(){
                 </TableBody>
                 </Table>
                 </TableContainer>
-                <Button variant="contained">Favoritar</Button>
+                <Button variant="contained" id={el.uid+''}>Favoritar</Button>
             </li>
         ))
 		}
