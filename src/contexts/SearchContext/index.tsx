@@ -48,7 +48,6 @@ export function SearchProvider({ children }: iSearchProviderProps) {
     setFilterList(filter);
   };
 
-
   return (
     <SearchContext.Provider
       value={{
