@@ -57,15 +57,15 @@ export function Register() {
   const submitRegisterFunction: SubmitHandler<iRegisterData> = async (data) => {
     console.log(data)
     console.log("Cheguei aqui 0");
-    // const formatedData = {
-    //   email: data!.email,
-    //   name: data!.name,
-    //   password: data!.password,
-    //   state: data!.state,
-    //   img: data!.img,
-    // };
-    // console.log("Cheguei aqui 1");
-    // await userRegisterApi(formatedData)
+    const formatedData = {
+      email: data!.email,
+      name: data!.name,
+      password: data!.password,
+      state: data!.state,
+      img: data!.img,
+    };
+    console.log("Cheguei aqui 1");
+    await userRegisterApi(formatedData)
     
   }
 
@@ -90,7 +90,6 @@ export function Register() {
           helperText={errors.name && `${errors.name?.message}`}
           {...register("name")}
         />
-
         <TextField
           id="password"
           label="senha"
@@ -100,7 +99,6 @@ export function Register() {
           helperText={errors.password && `${errors.password?.message}`}
           {...register("password")}
         />
-
         <TextField
           id="confirmPassword"
           label="Confirmação de senha"
@@ -110,7 +108,6 @@ export function Register() {
           helperText={errors.passwordConfirm && `${errors.passwordConfirm?.message}`}
           {...register("passwordConfirm")}
         />
-
         <FormControl fullWidth>
           <InputLabel variant="standard" htmlFor="uncontrolled-native">
             estado
@@ -123,13 +120,11 @@ export function Register() {
             }}
             {...register("state")}
           >
-            <option value="">Selecione seu estado</option>
             {brazilStates.map((ele, index) => (
               <option key={index} value={ele.uf}>{ele.nome}</option>
             ))}
           </NativeSelect>
         </FormControl>
-
         <TextField
           id="image"
           label="Imagem"
@@ -138,7 +133,6 @@ export function Register() {
           helperText={errors.img && `${errors.img?.message}`}
           {...register("img")}
         />
-
         <Button variant="contained" type="submit">
           Cadastre-se
         </Button>

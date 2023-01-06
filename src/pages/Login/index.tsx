@@ -13,7 +13,7 @@ import { loginFormSchema } from "./schema";
 
 export function Login() {
 
-  const { submitLoginFunction } = useContext(UserContext)
+  const { userLoginApi } = useContext(UserContext)
 
   const { register, handleSubmit, formState: {errors} } = useForm({
     resolver: yupResolver(loginFormSchema),
@@ -23,7 +23,7 @@ export function Login() {
     <LoginStyled>
       <Header colorTitle="--white" marginTop="1rem" />
       <h1>Login</h1>
-      <form onSubmit={handleSubmit(submitLoginFunction)}>
+      <form onSubmit={handleSubmit(userLoginApi)}>
         <TextField 
           id="email" 
           label="email" 
@@ -43,7 +43,7 @@ export function Login() {
           {...register("password")}
         />
 
-        <Button variant="contained">Entrar</Button>
+        <Button variant="contained" type="submit">Entrar</Button>
         <span>Não possui conta?</span>
         <Link to="/register">Cadastre-se</Link>
       </form>
