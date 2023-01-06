@@ -4,6 +4,7 @@ import { RoutesMain } from "./routes";
 
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
+import { SearchProvider } from "./contexts/SearchContext";
 
 export function App() {
   return (
@@ -11,7 +12,9 @@ export function App() {
       <GlobalStyle/>
       
       <UserContextProvider >
-        <RoutesMain />
+        <SearchProvider>
+          <RoutesMain />
+        </SearchProvider>
       </UserContextProvider>
 
 
