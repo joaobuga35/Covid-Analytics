@@ -6,7 +6,10 @@ export const SectionStyle = styled.section`
   align-items: center;
   gap: 2rem;
   width: 250px;
-  height: 100vh;
+
+  @media (max-width: 720px) {
+    width: 100%;
+  }
 
   h2 {
     font-family: var(--font-family-1);
@@ -15,6 +18,11 @@ export const SectionStyle = styled.section`
     font-weight: 700;
     line-height: 36px;
     margin-top: 1ch;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
+    text-align: center;
   }
 
   & > div {
