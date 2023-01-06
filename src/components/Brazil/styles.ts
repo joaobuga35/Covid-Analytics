@@ -7,7 +7,12 @@ export const SectionStyle = styled.section`
   flex-direction: column;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 15px 26px;
-  width: 100%;
+  height: max-content;
+
+  @media (max-width: 720px) {
+    width: 100%;
+    padding: 8px;
+  }
 
   > h2 {
     color: var(--gray-3);
@@ -28,7 +33,7 @@ export const SectionStyle = styled.section`
     background-color: var(--white);
   }
 
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     width: 225px;
   }
 `;

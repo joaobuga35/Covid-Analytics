@@ -3,12 +3,20 @@ import styled from "styled-components";
 export const ListStyle = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 26px;
   padding-bottom:5px;
   row-gap: 20px;
   overflow-y: auto;
-  max-height:428px;
+  max-height:550px;
+
+  @media (max-width: 720px) {
+    &{
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      max-width: 100%;
+    }
+  }
   
   h2 {
     font-family: var(--font-family-1);
@@ -17,15 +25,20 @@ export const ListStyle = styled.ul`
     text-align: center;
   }
 
+  td {
+    padding: 12px;
+  }
+
   li {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    max-width: 182px;
+    width: 182px;
     background-color: var(--white);
     padding: 14px 9px;
     box-shadow: 0px 4px 4px 0px #00000040;
     border-radius: var(--radius-2);
+    margin: 5px;
+    flex: 1 1 150px;
   }
 
   table {
