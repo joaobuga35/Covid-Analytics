@@ -1,27 +1,9 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { apiCovid } from "../../services/CovidBr/api";
+import { iSearchContext, iSearchProviderProps, iStates } from "./type";
 
 
 export const SearchContext = createContext<iSearchContext>({} as iSearchContext);
-
-interface iSearchProviderProps {
-  children: ReactNode;
-}
-
-interface iStates {
-    uid: number;
-	uf: string;
-	state: string;
-	cases: number;
-	deaths: number;
-	suspects: number;
-}
-	
-interface iSearchContext {
-  setSearch: (search: string) => void;
-  filterList: iStates[];
-  valueSearch:()=>void;
-}
 
 export function SearchProvider({ children }: iSearchProviderProps) {
   
