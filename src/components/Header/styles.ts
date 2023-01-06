@@ -6,6 +6,7 @@ export const MainTitle = styled.header<iTitleHeader>`
   flex-direction: column;
   align-items: center;
   margin-top: ${(props) => props.marginTop};
+  width: 100vw;
 
   div {
     display: flex;
