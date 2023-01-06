@@ -1,4 +1,3 @@
-
 import { GlobalStyle } from "./styles/global";
 import { UserContextProvider } from "./contexts/UserContext"
 import { RoutesMain } from "./routes";
@@ -15,6 +14,7 @@ export function App() {
       </UserContextProvider>
 
       <ToastContainer />
+
     </>
   );
 }
