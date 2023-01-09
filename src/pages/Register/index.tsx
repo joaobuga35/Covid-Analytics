@@ -50,12 +50,16 @@ export function Register() {
 
   const { userRegisterApi } = useContext(UserContext);
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: yupResolver(registerFormSchema),
   });
 
   const submitRegisterFunction: SubmitHandler<iRegisterData> = async (data) => {
-    console.log(data)
+    console.log(data);
     console.log("Cheguei aqui 0");
     const formatedData = {
       email: data!.email,
@@ -65,14 +69,13 @@ export function Register() {
       img: data!.img,
     };
     console.log("Cheguei aqui 1");
-    await userRegisterApi(formatedData)
-    
-  }
+    await userRegisterApi(formatedData);
+  };
 
   return (
     <RegisterStyled>
-      <Header colorTitle="--white" marginTop="1rem" />
-      <h1>Registro</h1>
+      <Header colorTitle="var(--white)" marginTop="1rem" />
+      <h2>Registro</h2>
       <form onSubmit={handleSubmit(submitRegisterFunction)}>
         <TextField
           id="email"
@@ -105,7 +108,9 @@ export function Register() {
           variant="filled"
           type="password"
           error={errors.passwordConfirm ? true : false}
-          helperText={errors.passwordConfirm && `${errors.passwordConfirm?.message}`}
+          helperText={
+            errors.passwordConfirm && `${errors.passwordConfirm?.message}`
+          }
           {...register("passwordConfirm")}
         />
         <FormControl fullWidth>
@@ -121,7 +126,9 @@ export function Register() {
             {...register("state")}
           >
             {brazilStates.map((ele, index) => (
-              <option key={index} value={ele.uf}>{ele.nome}</option>
+              <option key={index} value={ele.uf}>
+                {ele.nome}
+              </option>
             ))}
           </NativeSelect>
         </FormControl>
