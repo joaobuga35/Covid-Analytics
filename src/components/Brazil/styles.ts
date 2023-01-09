@@ -5,9 +5,12 @@ export const SectionStyle = styled.section`
   border-radius: var(--radius-3);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 15px 26px;
-  height: max-content;
+  padding: 0 26px; 
+
+
+  
 
   @media (max-width: 720px) {
     width: 100%;
@@ -21,6 +24,7 @@ export const SectionStyle = styled.section`
     font-size: var(--title-2);
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 3ch;
   }
 
   > picture {

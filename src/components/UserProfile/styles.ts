@@ -6,6 +6,8 @@ export const SectionStyle = styled.section`
   align-items: center;
   gap: 2rem;
   width: 250px;
+  justify-content: space-between;
+  
 
   @media (max-width: 720px) {
     width: 100%;
@@ -34,6 +36,7 @@ export const SectionStyle = styled.section`
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     width: 100%;
     background-color: var(--gray-1);
+    height: 50%;
   }
 `;
 
@@ -47,6 +50,7 @@ export const UserStyle = styled.div`
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
+    
 
     img {
       object-fit: cover;
@@ -67,12 +71,14 @@ export const UserStyle = styled.div`
 
 export const UserFavorite = styled.div`
   ul {
-    max-height: 150px;
+    max-height: 80%;
     width: 80%;
     margin-top: 3ch;
     display: flex;
     flex-direction: column;
     gap: 1ch;
     overflow-y: auto;
+    padding: 1rem;
+    
   }
 `;

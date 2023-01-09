@@ -35,6 +35,7 @@ export const LoginStyled = styled.div`
     gap: 20px;
     width: 40%;
     text-align: center;
+    max-width: 600px;
 
     Button {
       font-size: var(--font-button);
