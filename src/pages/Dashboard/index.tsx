@@ -12,14 +12,10 @@ export function Dashboard() {
   const { logedUser } = useContext(UserContext)
   
   useEffect(() => {
+    if(!logedUser.id){
+      navigate('/login')
+    };   
 
-    async function checkUser () { 
-        if(!logedUser.id){
-          navigate('/login')
-        };   
-      
-    }
-    checkUser()
   }, [])
   
   
