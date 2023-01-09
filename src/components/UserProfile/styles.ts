@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const SectionStyle = styled.section`
+  min-width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   width: 250px;
+  justify-content: space-between;
+  
 
   @media (max-width: 720px) {
     width: 100%;
@@ -34,6 +37,7 @@ export const SectionStyle = styled.section`
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     width: 100%;
     background-color: var(--gray-1);
+    height: 50%;
   }
 `;
 
@@ -47,10 +51,12 @@ export const UserStyle = styled.div`
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
+    
 
     img {
       object-fit: cover;
       width: 100%;
+      transition: 0.3s;
     }
 
     :hover {
@@ -62,17 +68,24 @@ export const UserStyle = styled.div`
         transform: scale(1.05);
       }
     }
+    :not(:hover) {
+      img {
+        transition: 3s;
+      }
+    }
   }
 `;
 
 export const UserFavorite = styled.div`
   ul {
-    max-height: 150px;
+    max-height: 80%;
     width: 80%;
     margin-top: 3ch;
     display: flex;
     flex-direction: column;
     gap: 1ch;
     overflow-y: auto;
+    padding: 1rem;
+    
   }
 `;

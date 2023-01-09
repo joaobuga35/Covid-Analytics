@@ -11,9 +11,9 @@ export function UserProfile() {
     <SectionStyle>
       <UserStyle>
         <div>
-          <img src={imgExample} alt="name example" title="name example" />
+          <img src={logedUser.img} alt={logedUser.name} title={logedUser.name} />
         </div>
-        <h2>name example</h2>
+        <h2>{logedUser.name}</h2>
       </UserStyle>
       <UserFavorite>
         <h2>Favoritos</h2>

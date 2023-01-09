@@ -15,7 +15,7 @@ export const LoginStyled = styled.div`
   align-items: center;
   flex-direction: column;
 
-  h1 {
+  h2 {
     color: var(--white);
     font-size: var(--title-1);
     text-align: center;
@@ -35,6 +35,7 @@ export const LoginStyled = styled.div`
     gap: 20px;
     width: 40%;
     text-align: center;
+    max-width: 600px;
 
     Button {
       font-size: var(--font-button);
