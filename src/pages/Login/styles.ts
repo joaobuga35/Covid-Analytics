@@ -15,7 +15,7 @@ export const LoginStyled = styled.div`
   align-items: center;
   flex-direction: column;
 
-  h1 {
+  h2 {
     color: var(--white);
     font-size: var(--title-1);
     text-align: center;
