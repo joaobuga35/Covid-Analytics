@@ -17,4 +17,6 @@ export interface iSearchProviderProps {
     setSearch: (search: string) => void;
     filterList: iStates[];
     valueSearch:()=>void;
+    states: iStates[];
+    
   }

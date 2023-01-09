@@ -68,6 +68,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
 
       if (response.data.accessToken) {
         localStorage.setItem("@TOKEN:", response.data.accessToken);
+        localStorage.setItem("@USER_ID:", response.data.user.id);
         navigate("/dashboard");
         setLogedUser(response.data.user)
 

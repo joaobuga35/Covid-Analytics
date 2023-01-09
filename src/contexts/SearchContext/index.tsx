@@ -30,12 +30,15 @@ export function SearchProvider({ children }: iSearchProviderProps) {
     setFilterList(filter);
   };
 
+
+
   return (
     <SearchContext.Provider
       value={{
         setSearch,
         valueSearch,
-        filterList
+        filterList,
+        states
       }}
     >
       {children}
