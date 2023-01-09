@@ -41,31 +41,29 @@ export function SearchProvider({ children }: iSearchProviderProps) {
     { state: "TO", map: "https://kenzie-academy-brasil-developers.github.io/mapsstates/to.svg" },
   ]);
 
-  function findMapImg(uf: string) {
+  function findMapImg (uf: string) {
       const currState = listMapsUfs.find(({state}) => uf === state);
       return currState?.map;
   }
 
   useEffect(()=>{
     async function getApi () {
-        try {
-            const resp = await apiCovid.get("/api/report/v1");
-            setStates(resp.data.data);
-        }
-         catch (error) {
-            console.error(error);
-        }
-      };
-      getApi ();
+      try {
+        const resp = await apiCovid.get("/api/report/v1");
+        setStates(resp.data.data);
+      }
+       catch (error) {
+        console.error(error);
+      }
+    };
+    getApi ();
 
   },[]);
     
-  function valueSearch(){
+  function valueSearch (){
     const filter = states.filter((el:iStates) => el.state.toLowerCase().includes(search) || el.uf.toLowerCase().includes(search) );
     setFilterList(filter);
   };
-
-
 
   return (
     <SearchContext.Provider
@@ -76,7 +74,7 @@ export function SearchProvider({ children }: iSearchProviderProps) {
         filterList,
         findMapImg
       }}
-    >\
+    >
       {children}
     </SearchContext.Provider>
   );

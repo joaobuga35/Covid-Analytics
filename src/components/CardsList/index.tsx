@@ -9,11 +9,9 @@ import {  useContext } from "react";
 import { SearchContext } from "../../contexts/SearchContext";
 import { FavoriteContext } from "../../contexts/FavoriteContext";
 
-
 export function ListCard(){
-	const { filterList , states }=useContext(SearchContext);
+	const { filterList }=useContext(SearchContext);
 	const { searchFavoriteId }=useContext(FavoriteContext);
-    
     
     return(
         <ListStyle>

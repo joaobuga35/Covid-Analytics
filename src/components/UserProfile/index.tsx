@@ -6,9 +6,9 @@ import { FavoriteContext } from "../../contexts/FavoriteContext";
 import { UserContext } from "../../contexts/UserContext";
 
 export function UserProfile() {
-  const{ favorites } = useContext(FavoriteContext)
-  const{ logedUser } = useContext(UserContext)
-  console.log(favorites)
+  const{ favorites } = useContext(FavoriteContext);
+  const{ logedUser } = useContext(UserContext);
+
   return (
     <SectionStyle>
       <UserStyle>

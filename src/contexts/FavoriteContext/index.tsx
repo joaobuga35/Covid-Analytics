@@ -40,7 +40,6 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
             }
           });
           setFavorites(resp.data);
-          
       }
        catch (error) {
           console.error(error);
@@ -48,20 +47,23 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
   };
       
   function searchFavoriteId(id:number ){
-    const idUser = localStorage.getItem("@USER_ID:");
-    const filter = states.filter((el:iStates) => el.uid===id );
-    const {uf,state,cases,deaths,suspects,uid}= filter[0]
-    const dataUser ={data:{
-      "uid":uid,
-      "uf":uf,
-      "state":state,
-      "cases":cases,
-      "deaths": deaths,
-      "suspects":suspects
-    },
-    "userId":Number(idUser)
+    const idUser = localStorage.getItem("@USER_ID:")
+    const filter = states.find((el:iStates) => el.uid==id );
+    if(filter){
+      const {uf,state,cases,deaths,suspects,uid}= filter
+      const dataUser ={
+        data:{
+        "uid":uid,
+        "uf":uf,
+        "state":state,
+        "cases":cases,
+        "deaths": deaths,
+        "suspects":suspects
+      },
+      userId:Number(idUser)
+      };
+      FavoriteApiPost(dataUser);
     }
-    FavoriteApiPost(dataUser)
   };
   
   return (
