@@ -5,12 +5,14 @@ import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import { Button } from "@mui/material";
-import { useContext } from "react";
+import {  useContext } from "react";
 import { SearchContext } from "../../contexts/SearchContext";
+import { FavoriteContext } from "../../contexts/FavoriteContext";
 
 export function ListCard(){
 	const { filterList }=useContext(SearchContext);
-        
+	const { searchFavoriteId }=useContext(FavoriteContext);
+    
     return(
         <ListStyle>
         { 
@@ -35,10 +37,10 @@ export function ListCard(){
                 </TableBody>
                 </Table>
                 </TableContainer>
-                <Button variant="contained" id={el.uid+''}>Favoritar</Button>
+                <Button variant="contained" onClick={()=>searchFavoriteId(el.uid)}>Favoritar</Button>
             </li>
         ))
 		}
-        </ListStyle> 
+        </ListStyle>
     );
 }

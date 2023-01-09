@@ -46,7 +46,6 @@ export function UserContextProvider({ children }: iContextProviderProps) {
     }
   }
 
-
   const userLoginApi: SubmitHandler<iLoginData> = async (data) => {
 
     console.log("Cheguei aqui 0");
@@ -68,6 +67,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
 
       if (response.data.accessToken) {
         localStorage.setItem("@TOKEN:", response.data.accessToken);
+        localStorage.setItem("@USER_ID:", response.data.user.id);
         navigate("/dashboard");
         setLogedUser(response.data.user)
 

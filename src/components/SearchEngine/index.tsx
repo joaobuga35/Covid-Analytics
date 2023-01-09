@@ -14,9 +14,7 @@ export function SearchEngine(){
                 <input type="text" name="Pesquisa" placeholder="Digitar Pesquisa" onChange={(e)=>setSearch(e.target.value.toLowerCase())}/>
                 <Button variant="contained" onClick={()=>valueSearch()}><IoIosSearch/></Button>
             </div>
-           
-                <ListCard/>
-            
+            <ListCard/>        
         </StyledSearch>
     );
 }
