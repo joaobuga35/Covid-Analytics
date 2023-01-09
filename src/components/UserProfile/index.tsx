@@ -3,9 +3,11 @@ import imgExample from "./imgTest.jpg";
 import { FavoriteCard } from "./FavoriteCard";
 import { useContext } from "react";
 import { FavoriteContext } from "../../contexts/FavoriteContext";
+import { UserContext } from "../../contexts/UserContext";
 
 export function UserProfile() {
   const{ favorites } = useContext(FavoriteContext)
+  const{ logedUser } = useContext(UserContext)
   console.log(favorites)
   return (
     <SectionStyle>

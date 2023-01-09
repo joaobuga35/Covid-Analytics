@@ -46,7 +46,6 @@ export function UserContextProvider({ children }: iContextProviderProps) {
     }
   }
 
-
   const userLoginApi: SubmitHandler<iLoginData> = async (data) => {
 
     console.log("Cheguei aqui 0");
