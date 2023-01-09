@@ -8,6 +8,8 @@ main {
     gap: 1.5rem;
     margin-top: 1rem;
     padding: 0 1rem;
+    margin: 32px;
+    
 }
 
 @media (max-width: 720px) {

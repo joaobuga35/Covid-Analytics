@@ -35,7 +35,8 @@ export const RegisterStyled = styled.div`
     gap: 20px;
     width: 40%;
     text-align: center;
-
+    max-width: 600px;
+    
     button {
       font-size: var(--font-button);
       font-family:var(--font-family-1);

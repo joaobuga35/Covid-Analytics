@@ -5,10 +5,18 @@ export const StyledSearch = styled.section`
     background-color: var(--gray-1);
     min-height: 568px;
     max-width:675px;
-    width: 50%;
+
+    width: 100%;
     margin: 0 auto;
     padding: 16px 48px 0px 48px;
     border-radius: var(--radius-3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media(max-width: 720px){
+        width: 85%;
+        
+    } 
+    
     
     h2 {
         font-family: var(--font-family-1);
@@ -17,13 +25,16 @@ export const StyledSearch = styled.section`
         text-align: center;
         color: var(--gray-3);
         margin-bottom: 28px;
+        margin-top: 3ch;
+        
 
     }
 
     div {
         display: flex;
         width: 100%;
-        gap:13px;
+        gap:9px;
+        
     }
 
     input {
@@ -49,7 +60,5 @@ export const StyledSearch = styled.section`
         font-size:16px;
     }
 
-    main {
-        width: 100%;
-    }
+
 `;
