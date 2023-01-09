@@ -5,30 +5,27 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import { SectionStyle } from "./styles";
 import brazilMap from "../../assets/brazilMap.svg";
+import { useContext } from "react";
+import { SearchContext } from "../../contexts/SearchContext";
 
 export function Brazil() {
+  const { states } = useContext(SearchContext);
+
   const brazilData = [
     {
-      name: "Casos",
-      value: 1000,
-    },
-    {
-      name: "Confirmados",
-      value: 982,
+      name: "Suspeitos",
+      value: states.reduce((acc, curr) => acc + curr.suspects, 0),
     },
     {
       name: "Mortes",
-      value: 466464,
+      value: states.reduce((acc, curr) => acc + curr.deaths, 0),
     },
     {
-      name: "Recuperados",
-      value: 797,
-    },
-    {
-      name: "Suspeitos",
-      value: 798543,
+      name: "Casos",
+      value: states.reduce((acc, curr) => acc + curr.cases, 0),
     },
   ];
+  
   return (
     <SectionStyle>
       <h2>Brasil</h2>

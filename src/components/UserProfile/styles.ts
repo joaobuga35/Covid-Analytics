@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SectionStyle = styled.section`
+  min-width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,6 +56,7 @@ export const UserStyle = styled.div`
     img {
       object-fit: cover;
       width: 100%;
+      transition: 0.3s;
     }
 
     :hover {
@@ -64,6 +66,11 @@ export const UserStyle = styled.div`
       img {
         transition: 0.3s;
         transform: scale(1.05);
+      }
+    }
+    :not(:hover) {
+      img {
+        transition: 3s;
       }
     }
   }
