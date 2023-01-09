@@ -8,7 +8,7 @@ export const StyledSearch = styled.section`
 
     width: 100%;
     margin: 0 auto;
-    padding: 16px 48px 0px 48px;
+    padding: 0px 48px 0px 48px;
     border-radius: var(--radius-3);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -24,8 +24,9 @@ export const StyledSearch = styled.section`
         font-weight: 700;
         text-align: center;
         color: var(--gray-3);
-        margin-bottom: 28px;
-        margin-top: 3ch;
+        margin-bottom: var(--margin-bottom-h2);
+        margin-top: var(--margin-top-H2)
+        
         
 
     }

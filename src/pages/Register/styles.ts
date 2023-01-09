@@ -45,7 +45,6 @@ export const RegisterStyled = styled.div`
     width: 40%;
     text-align: center;
     max-width: 600px;
-
     button {
       font-size: var(--font-button);
       font-family: var(--font-family-1);
@@ -61,11 +60,13 @@ export const RegisterStyled = styled.div`
     }
 
     a {
-      text-align: center;
+      
       cursor: pointer;
       font-family: var(--font-family-1);
       font-size: var(--font-button);
       color: var(--white);
+      width: max-content;
+      margin: 0 auto;
     }
 
     div {
