@@ -18,6 +18,7 @@ export const MainTitle = styled.header<iTitleHeader>`
     border-radius: 100%;
     background-color: var(--gray-trans);
     padding: 5px;
+    backdrop-filter: blur(5px);
   }
 
   h1 {

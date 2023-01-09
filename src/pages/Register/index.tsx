@@ -1,4 +1,3 @@
-import React from "react";
 import { RegisterStyled } from "./styles";
 import {
   FormControl,
@@ -146,7 +145,7 @@ export function Register() {
 
         <span>Já possui conta?</span>
 
-        <Link to="/">Entrar</Link>
+        <Link to="/login">Entre</Link>
       </form>
     </RegisterStyled>
   );

@@ -16,26 +16,29 @@ export const HomepageStyled = styled.main`
   position: absolute;
   top: 0;
   left: 0;
+
   > div {
     height: 55vh;
     padding: 1.5rem 1rem;
     margin: 0 1rem;
     max-width: 600px;
     margin-top: 1.5rem;
-    border: 1px solid var(--color-blue);
-    box-shadow: 0 2px 2px var(--gray-trans);
     background-color: rgba(0, 0, 255, 0.2);
     border-radius: var(--radius-2);
+    backdrop-filter: blur(5px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
     p {
       text-align: center;
-      font-size: var(--title-2);
+      font-size: 25px;
       color: var(--white);
+      font-family: var(--font-family-1);
       text-shadow: 1px 1px 2px var(--gray-5);
       line-height: 125%;
+      padding: 30px;
     }
     > div {
       display: flex;
@@ -45,12 +48,12 @@ export const HomepageStyled = styled.main`
       padding-bottom: 5%;
       > div {
         display: flex;
-        gap: 2ch;
+        gap: 15px;
         margin-bottom: 1rem;
       }
     }
   }
-  a {
+  /* a {
     color: var(--white);
     text-decoration: none;
     font-weight: 400;
@@ -64,5 +67,10 @@ export const HomepageStyled = styled.main`
       transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
       background-color: transparent;
     }
+  } */
+
+  a {
+    text-decoration: none;
+    color: unset;
   }
 `;
