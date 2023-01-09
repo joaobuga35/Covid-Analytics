@@ -32,6 +32,10 @@ export const GlobalStyle = createGlobalStyle`
     --radius-1:2px;
     --radius-2:5px;
     --radius-3: 30px;
+
+    --margin-top-H2:3ch;
+    --margin-bottom-h2: 28px;
+   
   }
   
 `;

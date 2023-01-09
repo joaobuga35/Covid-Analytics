@@ -18,13 +18,14 @@ export const SectionStyle = styled.section`
     font-size: var(--title-2);
     color: var(--gray-3);
     font-weight: 700;
-    line-height: 36px;
-    margin-top: 1ch;
+
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     width: 80%;
     text-align: center;
+    margin-bottom: var(--margin-bottom-h2);
+    margin-top: var(--margin-top-H2)
   }
 
   & > div {
@@ -32,7 +33,7 @@ export const SectionStyle = styled.section`
     align-items: center;
     flex-direction: column;
     border-radius: var(--radius-3);
-    padding: 32px 0;
+    //padding: 32px 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     width: 100%;
     background-color: var(--gray-1);

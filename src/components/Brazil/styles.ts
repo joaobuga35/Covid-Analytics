@@ -23,8 +23,8 @@ export const SectionStyle = styled.section`
     font-weight: 700;
     font-size: var(--title-2);
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 3ch;
+    margin-bottom: var(--margin-bottom-h2);
+    margin-top: var(--margin-top-H2)
   }
 
   > picture {
