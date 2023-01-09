@@ -17,5 +17,5 @@ export interface iSearchProviderProps {
     setSearch: (search: string) => void;
     filterList: iStates[];
     valueSearch: () => void;
-    findMapImg: (uf: string) => void;
+    findMapImg: (uf: string) => string | undefined;
   }

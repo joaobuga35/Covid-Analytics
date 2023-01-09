@@ -73,7 +73,7 @@ export function SearchProvider({ children }: iSearchProviderProps) {
         filterList,
         findMapImg
       }}
-    >
+    >\
       {children}
     </SearchContext.Provider>
   );
