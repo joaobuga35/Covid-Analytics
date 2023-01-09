@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { HomepageStyled } from "./styles";
@@ -14,10 +15,13 @@ export function Homepage() {
         </p>
         <div>
           <div>
-            <Link to={"/login"}>Login</Link>
-            <Link to={"/register"}>Registro</Link>
+            <Link to={"/login"}>
+               <Button variant="contained">Login</Button>
+            </Link>
+            <Link to={"/register"}>
+              <Button variant="contained">Registro</Button>
+            </Link>
           </div>
-          <Link to={"/dashboard"}>Conhecer o site</Link>
         </div>
       </div>
     </HomepageStyled>
