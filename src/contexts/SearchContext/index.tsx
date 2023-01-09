@@ -68,6 +68,7 @@ export function SearchProvider({ children }: iSearchProviderProps) {
   return (
     <SearchContext.Provider
       value={{
+        states,
         setSearch,
         valueSearch,
         filterList,

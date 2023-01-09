@@ -14,8 +14,9 @@ export interface iSearchProviderProps {
   }
       
   export interface iSearchContext {
-    setSearch: (search: string) => void;
+    states: iStates[];
     filterList: iStates[];
+    setSearch: (search: string) => void;
     valueSearch: () => void;
     findMapImg: (uf: string) => string | undefined;
   }

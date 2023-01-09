@@ -7,8 +7,7 @@ export const MainTitle = styled.header<iTitleHeader>`
   align-items: center;
   margin-top: ${(props) => props.marginTop};
   width: 100%;
-  margin-bottom:32px;
-
+  margin-bottom: 32px;
 
   div {
     display: flex;
@@ -18,21 +17,26 @@ export const MainTitle = styled.header<iTitleHeader>`
     width: 68px;
     border-radius: 100%;
     background-color: var(--gray-trans);
+    padding: 5px;
   }
 
   h1 {
-    color: ${(props) => props.color};
+    color: ${(props) => props.colorTitle};
     font-family: var(--font-family-3);
     font-size: var(--title-header-mobile);
+    font-weight: 700;
 
     @media (min-width: 1024px) {
       font-size: var(--title-header);
+      display: flex;
+      align-items: center;
     }
   }
 
   @media (min-width: 1024px) {
     flex-direction: row;
     gap: 24px;
+    align-items: flex-start;
     justify-content: center;
   }
 `;

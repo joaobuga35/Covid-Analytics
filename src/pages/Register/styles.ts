@@ -17,11 +17,20 @@ export const RegisterStyled = styled.div`
 
   h1 {
     color: var(--white);
+    font-size: var(--title-header);
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-family: var(--font-family-3);
+  }
+
+  h2 {
+    color: var(--white);
     font-size: var(--title-1);
     text-align: center;
     margin-bottom: 16px;
-    font-weight: 900;
-    font-family:var(--font-family-1);
+    font-weight: 700;
+    font-family: var(--font-family-1);
   }
 
   form {
@@ -38,23 +47,22 @@ export const RegisterStyled = styled.div`
     max-width: 600px;
     button {
       font-size: var(--font-button);
-      font-family:var(--font-family-1);
+      font-family: var(--font-family-1);
     }
     span {
       color: var(--black);
       font-size: var(--name-states);
       font-weight: 400;
-      font-family:var(--font-family-1);
+      font-family: var(--font-family-1);
     }
     input {
       background-color: white;
-      
     }
 
     a {
       
       cursor: pointer;
-      font-family:var(--font-family-1);
+      font-family: var(--font-family-1);
       font-size: var(--font-button);
       color: var(--white);
       width: max-content;
@@ -63,7 +71,6 @@ export const RegisterStyled = styled.div`
 
     div {
       background-color: white;
-     
     }
 
     select {
