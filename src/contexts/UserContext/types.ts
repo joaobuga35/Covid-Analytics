@@ -27,7 +27,6 @@ export interface iLoginData{
 
 
 export interface iUserProviderValue{
-  // submitRegisterFunction: (data: iRegisterData | any) => void,
   userRegisterApi: (data: iRegisterData | any) => void,
   userLoginApi: (data: iLoginData | any) => void,
   logedUser: iLogedUser,
