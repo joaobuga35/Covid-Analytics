@@ -14,7 +14,7 @@ export function UserProfile() {
         <h2>name example</h2>
       </UserStyle>
       <UserFavorite>
-        <h2>BFavoritos</h2>
+        <h2>Favoritos</h2>
         <ul>
           {favoriteExampleList.map((value) => (
             <FavoriteCard key={Math.random()} name={value} />

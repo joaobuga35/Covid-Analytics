@@ -52,11 +52,12 @@ export const LoginStyled = styled.div`
       font-family: "inter";
     }
     a {
-      text-align: center;
       cursor: pointer;
       font-family: "inter";
       font-size: var(--font-button);
       color: var(--white);
+      width: max-content;
+      margin: 0 auto;
     }
   }
 

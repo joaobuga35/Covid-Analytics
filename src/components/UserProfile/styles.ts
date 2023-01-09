@@ -18,6 +18,7 @@ export const SectionStyle = styled.section`
     font-size: var(--title-2);
     color: var(--gray-3);
     font-weight: 700;
+    
 
     text-overflow: ellipsis;
     overflow: hidden;
@@ -28,17 +29,30 @@ export const SectionStyle = styled.section`
     margin-top: var(--margin-top-H2)
   }
 
-  & > div {
+  & > div:nth-child(1) {
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: var(--radius-3);
-    //padding: 32px 0;
+    padding: 32px 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     width: 100%;
     background-color: var(--gray-1);
     height: 50%;
   }
+
+  & > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: var(--radius-3);
+    padding: 0 0 32px 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    width: 100%;
+    background-color: var(--gray-1);
+    height: 50%;
+  }
+  
 `;
 
 export const UserStyle = styled.div`
