@@ -10,6 +10,8 @@ export const FavoriteContext = createContext<iFavoriteContext>({} as iFavoriteCo
 export function FavoriteProvider({ children }: iFavoriteProviderProps) {
   const {states} = useContext(SearchContext);
   const [favorites, setFavorites] = useState([] as iDataUserGet[] | []);
+  const [openModal, setOpenModal] = useState(false)
+  const [ dataModal, setDataModal] = useState([] as iDataUser[] | [])
  
   useEffect(()=>{
     FavoriteApiGet () 
@@ -66,11 +68,23 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
     }
   };
   
+  function filterFavorite(id:number){
+    const filter = favorites.filter((el)=>el.data.uid==id)
+    console.log(filter)
+    setDataModal(filter)
+    setOpenModal(true)
+
+  }
+  
   return (
     <FavoriteContext.Provider
       value={{
         searchFavoriteId,
-        favorites
+        favorites,
+        filterFavorite,
+        dataModal,
+        openModal,
+        setOpenModal
       }}
     >
       {children}

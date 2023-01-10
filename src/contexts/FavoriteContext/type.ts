@@ -19,4 +19,8 @@ export interface iDataUserGet {
 export interface iFavoriteContext {
   searchFavoriteId: (id:number) => void;
   favorites: iDataUserGet[];
+  filterFavorite: (id:number) => void;
+  dataModal: iDataUser[] | [];
+  openModal: boolean;
+  setOpenModal: (openModal: boolean) => void;
 }
