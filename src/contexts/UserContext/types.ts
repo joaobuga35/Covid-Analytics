@@ -32,4 +32,5 @@ export interface iUserProviderValue{
   logedUser: iLogedUser,
   setLogedUser: (logedUser: iLogedUser) => void,
   loading: boolean,
+  routesLoading: boolean,
 };
