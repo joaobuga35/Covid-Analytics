@@ -16,7 +16,7 @@ export type iRegisterData = {
   password?: string;
   passwordConfirm?: string;
   state?: string;
-  img?: string;
+  img?: string | undefined;
 };
 
 export interface iLoginData{
@@ -32,4 +32,5 @@ export interface iUserProviderValue{
   logedUser: iLogedUser,
   setLogedUser: (logedUser: iLogedUser) => void,
   loading: boolean,
+  routesLoading: boolean,
 };

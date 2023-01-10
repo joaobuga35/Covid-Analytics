@@ -19,5 +19,5 @@ export const registerFormSchema = yup.object().shape({
     .string(),
   img: yup
     .string()
-    .required("A imagem é obrigatória"),
+    
 });

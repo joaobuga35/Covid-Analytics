@@ -65,13 +65,17 @@ export const UserStyle = styled.div`
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
-    
+      background-image:url("https://img2.gratispng.com/20180331/eow/kisspng-computer-icons-user-clip-art-user-5abf13db298934.2968784715224718991702.jpg");
 
-    img {
+
+
+    img{
       object-fit: cover;
       width: 100%;
       transition: 0.3s;
+      
     }
+    
 
     :hover {
       transition: 0.3s;
