@@ -47,7 +47,7 @@ export function Login() {
         />
 
         <Button variant="contained" type="submit" disabled={loading}>
-          {loading ? <CircularProgress color="info" /> : "Entrar"}
+          Entrar
         </Button>
         <span>Não possui conta?</span>
         <Link to="/register">Cadastre-se</Link>
