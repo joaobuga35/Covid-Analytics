@@ -24,5 +24,5 @@ export interface iFavoriteContext {
   openModal: boolean;
   setOpenModal: (openModal: boolean) => void;
   deleteFavoriteId: (id:number) => void;
-  waitFavorite: boolean;
+  
 }

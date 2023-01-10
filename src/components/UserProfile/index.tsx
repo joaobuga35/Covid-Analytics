@@ -3,11 +3,10 @@ import { CircularProgress } from "@mui/material";
 import { FavoriteCard } from "./FavoriteCard";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { FavoriteContext } from "../../contexts/FavoriteContext";
 
 
 export function UserProfile() {
-  const { favorites,waitFavorite } = useContext(FavoriteContext);
+  const { favorites,waitFavorite } = useContext(UserContext);
   const { logedUser } = useContext(UserContext)
 
   return (
@@ -23,7 +22,6 @@ export function UserProfile() {
                 currentTarget.onerror = null; 
                 currentTarget.src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
               }} alt={logedUser.name} title={logedUser.name} /> :  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"/> }
-
         </div>
         <h2>{logedUser.name}</h2>
       </UserStyle>
