@@ -26,6 +26,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
 
   async function userRegisterApi(data: iRegisterData) {
     try {
+      setLoading(true);
       await api.post("register", data);
       toast.success("Usuário cadastrado com sucesso!", {
         position: "bottom-right",
@@ -38,7 +39,6 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         theme: "light",
       });
       navigate("/login");
-
     } catch (error) {
       console.error(error);
       toast.error("Algo deu errado com a sua requisição, Tente mais tarde", {
@@ -51,7 +51,8 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         progress: undefined,
         theme: "light",
       });
-
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -76,8 +77,6 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         localStorage.setItem("@USER_ID:", response.data.user.id);
         navigate("/dashboard");
         setLogedUser(response.data.user);
-        
-
       } else {
         toast.error(response.data, {
           position: "bottom-right",
@@ -89,8 +88,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
           progress: undefined,
           theme: "light",
         });
-      };
-
+      }
     } catch (error) {
       console.error(error);
       toast.error("Algo deu errado com a sua requisição, Tente mais tarde", {
@@ -103,11 +101,9 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         progress: undefined,
         theme: "light",
       });
-
     } finally {
       setLoading(false);
-
-    };
+    }
   };
 
   useEffect(() => {
@@ -118,9 +114,10 @@ export function UserContextProvider({ children }: iContextProviderProps) {
       if (!token || !userID) {
         setRoutesLoading(false);
         return;
-      };
+      }
 
       try {
+        setLoading(true);
         const response = await api.get(`users/${userID}`, {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -128,17 +125,14 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         });
 
         setLogedUser(response.data);
-
       } catch (error) {
         console.error(error);
-
       } finally {
+        setLoading(false);
         setRoutesLoading(false);
-
-      };
-    };
+      }
+    }
     checkUser();
-    
   }, []);
 
   async function FavoriteApiGet () {
