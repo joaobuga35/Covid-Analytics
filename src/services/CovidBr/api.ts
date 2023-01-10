@@ -2,5 +2,5 @@ import axios from "axios";
 
 export const apiCovid = axios.create({
   baseURL: "https://covid19-brazil-api.now.sh",
-  timeout: 4000,
+  timeout: 15000,
 });
