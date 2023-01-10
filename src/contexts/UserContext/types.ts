@@ -16,7 +16,7 @@ export type iRegisterData = {
   password?: string;
   passwordConfirm?: string;
   state?: string;
-  img?: string;
+  img?: string | undefined;
 };
 
 export interface iLoginData{
