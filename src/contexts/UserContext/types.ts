@@ -31,4 +31,5 @@ export interface iUserProviderValue{
   userLoginApi: (data: iLoginData | any) => void,
   logedUser: iLogedUser,
   setLogedUser: (logedUser: iLogedUser) => void,
+  loading: boolean,
 };
