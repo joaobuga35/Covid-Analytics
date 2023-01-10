@@ -5,6 +5,7 @@ import { RoutesMain } from "./routes";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
 import { SearchProvider } from "./contexts/SearchContext";
+import { FavoriteProvider } from "./contexts/FavoriteContext";
 
 export function App() {
   return (
@@ -13,7 +14,9 @@ export function App() {
       
       <UserContextProvider >
         <SearchProvider>
-          <RoutesMain />
+          <FavoriteProvider>
+            <RoutesMain />
+          </FavoriteProvider>
         </SearchProvider>
       </UserContextProvider>
 

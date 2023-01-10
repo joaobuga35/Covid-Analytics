@@ -1,5 +1,5 @@
 import { SectionStyle, UserFavorite, UserStyle } from "./styles";
-import imgExample from "./imgTest.jpg";
+
 import { FavoriteCard } from "./FavoriteCard";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
