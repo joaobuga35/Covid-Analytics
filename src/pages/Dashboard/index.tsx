@@ -6,23 +6,24 @@ import { SearchEngine } from "../../components/SearchEngine";
 import { UserProfile } from "../../components/UserProfile";
 import { DashboardStyles } from "./styles";
 import { UserContext } from "../../contexts/UserContext";
+import { FavoriteContext } from "../../contexts/FavoriteContext";
+import { ModalFavorite } from "../../components/FavoriteModal";
 
 export function Dashboard() {
   const navigate = useNavigate();
   const { logedUser } = useContext(UserContext);
+  const { openModal } = useContext(FavoriteContext)
   
   useEffect(() => {
     if(!logedUser.id){
       navigate('/login');
     };   
 
-  //eslint-disable-next-line
   }, []);
   
-  
-
   return (
     <DashboardStyles>
+      { openModal && <ModalFavorite/> }
       <Header marginTop="8px" />
       <main>
         <UserProfile />

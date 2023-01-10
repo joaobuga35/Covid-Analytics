@@ -94,7 +94,7 @@ export const UserStyle = styled.div`
   }
 `;
 
-export const UserFavorite = styled.div`
+export const UserFavoriteStyled = styled.div`
   ul {
     max-height: 80%;
     width: 80%;
