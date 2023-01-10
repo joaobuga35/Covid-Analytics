@@ -52,7 +52,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
     console.log("Cheguei aqui 0");
     try {
       console.log("Cheguei aqui 1");
-      setLoading(true)
+      setLoading(true);
       const response = await api.post("login", data);
       
       console.log("Cheguei aqui 2");
@@ -71,7 +71,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         localStorage.setItem("@TOKEN:", response.data.accessToken);
         localStorage.setItem("@USER_ID:", response.data.user.id);
         navigate("/dashboard");
-        setLogedUser(response.data.user)
+        setLogedUser(response.data.user);
 
         console.log("Cheguei aqui 3");
         console.log(response.data);
@@ -100,8 +100,8 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         theme: "light",
       });
     } finally {
-     setLoading(false)
-   }
+     setLoading(false);
+   };
   }
 
   return (

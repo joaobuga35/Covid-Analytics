@@ -3,7 +3,7 @@ import { CircularProgress, TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
