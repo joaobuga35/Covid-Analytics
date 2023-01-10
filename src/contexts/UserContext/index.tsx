@@ -11,6 +11,7 @@ import {
   iRegisterData,
   iUserProviderValue,
 } from "./types";
+import { iDataUserGet } from "../FavoriteContext/type";
 
 export const UserContext = createContext({} as iUserProviderValue);
 
@@ -18,6 +19,8 @@ export function UserContextProvider({ children }: iContextProviderProps) {
   const [logedUser, setLogedUser] = useState({} as iLogedUser);
   const [loading, setLoading] = useState<boolean>(false);
   const [routesLoading, setRoutesLoading] = useState<boolean>(true);
+  const [waitFavorite, setWaitFavorite] = useState(false);
+  const [favorites, setFavorites] = useState([] as iDataUserGet[] | []);
 
   const navigate = useNavigate();
 
@@ -67,6 +70,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         progress: undefined,
         theme: "light",
       });
+      FavoriteApiGet()
 
       if (response.data.accessToken) {
         localStorage.setItem("@TOKEN:", response.data.accessToken);
@@ -131,6 +135,25 @@ export function UserContextProvider({ children }: iContextProviderProps) {
     checkUser();
   }, []);
 
+  async function FavoriteApiGet () {
+    setWaitFavorite(true)
+    const token = localStorage.getItem("@TOKEN:");
+    const idUser = localStorage.getItem("@USER_ID:");
+      try {
+          const resp = await api.get(`favoriteIds?userId=${idUser}`,{
+            headers:{
+              Authorization: `Bearer ${token}`,  
+            }
+          });
+          setFavorites(resp.data);
+          setWaitFavorite(false)
+      }
+       catch (error) {
+          console.error(error);
+          setWaitFavorite(false)
+      }
+  };
+
   return (
     <UserContext.Provider
       value={{
@@ -140,6 +163,11 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         setLogedUser,
         loading,
         routesLoading,
+        FavoriteApiGet,
+        waitFavorite, 
+        setWaitFavorite,
+        favorites,
+        setFavorites
       }}
     >
       {children}

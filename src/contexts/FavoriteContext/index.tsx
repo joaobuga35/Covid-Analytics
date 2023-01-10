@@ -3,21 +3,23 @@ import { toast } from "react-toastify";
 import { api } from "../../services/User/api";
 import { SearchContext } from "../SearchContext";
 import { iStates } from "../SearchContext/type";
+import { UserContext } from "../UserContext";
 import { iFavoriteContext, iFavoriteProviderProps,iDataUser, iDataUserGet } from "./type";
 
 
 export const FavoriteContext = createContext<iFavoriteContext>({} as iFavoriteContext);
 
 export function FavoriteProvider({ children }: iFavoriteProviderProps) {
-  const {states} = useContext(SearchContext);
-  const [favorites, setFavorites] = useState([] as iDataUserGet[] | []);
+  const {states,} = useContext(SearchContext);
+  const {FavoriteApiGet,favorites, setWaitFavorite} = useContext(UserContext);
+
   const [openModal, setOpenModal] = useState(false)
   const [ dataModal, setDataModal] = useState([] as iDataUserGet[] | [])
-  const [waitFavorite, setWaitFavorite] = useState(false)
 
+  const token = localStorage.getItem("@TOKEN:");
   useEffect(()=>{
     FavoriteApiGet () 
-  },[]);
+  },[token]);
 
   async function FavoriteApiPost (dataUser: iDataUser) {
     setWaitFavorite(true)
@@ -36,24 +38,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
         }
   };
   
-  async function FavoriteApiGet () {
-    setWaitFavorite(true)
-    const token = localStorage.getItem("@TOKEN:");
-    const idUser = localStorage.getItem("@USER_ID:");
-      try {
-          const resp = await api.get(`favoriteIds?userId=${idUser}`,{
-            headers:{
-              Authorization: `Bearer ${token}`,  
-            }
-          });
-          setFavorites(resp.data);
-          setWaitFavorite(false)
-      }
-       catch (error) {
-          console.error(error);
-          setWaitFavorite(false)
-      }
-  };
+  
       
   function searchFavoriteId(id:number ){
     setWaitFavorite(true)
@@ -125,7 +110,6 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
         openModal,
         setOpenModal,
         deleteFavoriteId,
-        waitFavorite
       }}
     >
       {children}
