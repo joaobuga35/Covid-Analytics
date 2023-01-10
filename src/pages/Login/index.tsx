@@ -1,5 +1,5 @@
 import { LoginStyled } from "./styles";
-import { TextField } from "@mui/material";
+import { CircularProgress, TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
@@ -10,13 +10,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { loginFormSchema } from "./schema";
 
 export function Login() {
-  const { userLoginApi } = useContext(UserContext);
+  const { userLoginApi, loading } = useContext(UserContext);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
+  const { register, handleSubmit, formState: { errors }, } = useForm({
     resolver: yupResolver(loginFormSchema),
   });
 
@@ -44,8 +40,8 @@ export function Login() {
           {...register("password")}
         />
 
-        <Button variant="contained" type="submit">
-          Entrar
+        <Button variant="contained" type="submit" disabled={loading} >
+          {loading ? <CircularProgress color="error" /> : "Entrar"}
         </Button>
         <span>Não possui conta?</span>
         <Link to="/register">Cadastre-se</Link>
