@@ -6,11 +6,11 @@ import { useContext } from "react";
 import { FavoriteContext } from "../../../contexts/FavoriteContext";
 
 // Faltou a key
-export function FavoriteCard({ key,name,id }: iFavCartTypes) {
+export function FavoriteCard({ name,id }: iFavCartTypes) {
   const { filterFavorite } = useContext(FavoriteContext);
 
   return (
-    <FavoriteCardStyle key={key}>
+    <FavoriteCardStyle key={Math.random()}>
       <h3>{name}</h3>
       <Button variant="contained" aria-label="olhar conteúdo" size="small" className="ola" onClick={()=>filterFavorite(id)}>
       <AiOutlineEye />

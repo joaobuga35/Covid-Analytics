@@ -1,16 +1,16 @@
 import { FavoriteContent } from '../FavoriteContent'
-import { Section } from './style'
+import { ModalStyle } from './style'
 
 
 export function ModalFavorite(){
 
     return(
-        <Section>
+        <ModalStyle>
             <div className='modal'>
                 <FavoriteContent/>
             </div>
 
-        </Section>
+        </ModalStyle>
 
 
     )

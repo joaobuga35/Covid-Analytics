@@ -10,18 +10,26 @@ import { SearchContext } from "../../contexts/SearchContext";
 import { FavoriteContext } from "../../contexts/FavoriteContext";
 
 export function ListCard(){
-	const { filterList }=useContext(SearchContext);
+	const { filterList,states }=useContext(SearchContext);
 	const { searchFavoriteId }=useContext(FavoriteContext);
-    
+    let data = []
+    if(filterList.length){
+        data = filterList
+    }else{
+        data = states
+    }
     return(
         <ListStyle>
-        { 
-		filterList.map((el)=>(
+        { data.map((el)=>(
             <li key={Math.random()} >
                 <h2>{el.state}</h2>
                <TableContainer>
                 <Table>
                 <TableBody>
+                    <TableRow key={Math.random()}>
+                        <TableCell>Suspeitos</TableCell>
+                        <TableCell align="right">{el.suspects}</TableCell>
+                    </TableRow>
                     <TableRow key={Math.random()}>
                         <TableCell>Mortes</TableCell>
                         <TableCell align="right">{el.deaths}</TableCell>
@@ -29,10 +37,6 @@ export function ListCard(){
                     <TableRow key={Math.random()}>
                         <TableCell>Casos</TableCell>
                         <TableCell align="right">{el.cases}</TableCell>
-                    </TableRow>
-                    <TableRow key={Math.random()}>
-                        <TableCell>Suspeitos</TableCell>
-                        <TableCell align="right">{el.suspects}</TableCell>
                     </TableRow>
                 </TableBody>
                 </Table>
