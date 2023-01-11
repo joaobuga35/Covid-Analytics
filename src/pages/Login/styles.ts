@@ -37,7 +37,7 @@ export const LoginStyled = styled.div`
     text-align: center;
     max-width: 580px;
 
-    Button {
+    button {
       height: 56px;
       font-size: var(--font-button);
       font-family: "inter";
@@ -53,9 +53,9 @@ export const LoginStyled = styled.div`
     > div {
       height: 40px;
       border-radius: 5px;
-      p{
-        color: #AC0003;
+      p {
         font-weight:500;
+        color: var(--white) !important;
       }
     }
 
@@ -64,7 +64,7 @@ export const LoginStyled = styled.div`
       border-radius: 5px;
     }
 
-    Input {
+    input {
       background-color: white;
       font-family: "inter";
       border-radius: 5px;

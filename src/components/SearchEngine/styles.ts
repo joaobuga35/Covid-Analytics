@@ -61,6 +61,7 @@ export const SearchStyled = styled.section`
     }
   }
   @media (min-width: 1029px) {
+    padding:0 20px 8px 20px;
     max-width: 675px;
   }
 `;
