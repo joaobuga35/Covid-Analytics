@@ -20,6 +20,7 @@ main {
     main {
         flex-direction:row;
         align-items: stretch;
+        margin-bottom: 25px;
         justify-content: center;
     }
 }
