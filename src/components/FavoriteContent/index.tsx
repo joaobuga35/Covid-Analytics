@@ -17,7 +17,7 @@ export function FavoriteContent(){
     const { findMapImg } = useContext(SearchContext);
     
     return(
-        <FavoriteStyle>
+        <FavoriteStyled>
            <button onClick={()=>setOpenModal(false)}><img src={x} alt="close button" /></button>
            <h2>{dataModal[0].data.state}</h2>
            <section>
@@ -54,6 +54,6 @@ export function FavoriteContent(){
             </div>
             <img src={findMapImg(dataModal[0].data.uf)} alt="estado brasileiro" />
            </section>
-        </FavoriteStyle>
+        </FavoriteStyled>
     )
 }
