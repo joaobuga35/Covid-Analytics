@@ -32,7 +32,7 @@ export const RegisterStyled = styled.div`
     border: 1px solid rgba(255, 255, 255, 0.18);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     width: 70%;
     text-align: center;
     max-width: 580px;
@@ -49,6 +49,15 @@ export const RegisterStyled = styled.div`
       font-family: var(--font-family-1);
     }
 
+    > div {
+      height: 40px;
+      border-radius: 5px;
+      p{
+        color: #AC0003;
+        font-weight:500;
+      }
+    }
+
     div {
       border-radius: 5px;
       > div:nth-child(2) {
@@ -58,6 +67,7 @@ export const RegisterStyled = styled.div`
 
     input {
       background-color: white;
+      font-family: "inter";
       border-radius: 5px;
     }
 
@@ -70,9 +80,9 @@ export const RegisterStyled = styled.div`
       margin: 0 auto;
     }
 
-    div {
+     div:nth-child(5) {
       background-color: white;
-    }
+    } 
 
     select {
       background-color: white;
@@ -85,9 +95,12 @@ export const RegisterStyled = styled.div`
         margin-left: 13px;
         margin-top: 6px;
         z-index: 10;
+
       }
     }
   }
+
+
 
   @media (min-width: 768px) {
     form {

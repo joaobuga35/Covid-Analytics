@@ -54,4 +54,4 @@ export function Login() {
       </form>
     </LoginStyled>
   );
-}
+};

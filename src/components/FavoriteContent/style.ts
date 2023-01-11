@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FavoriteStyle = styled.section`
+export const FavoriteStyled = styled.section`
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;

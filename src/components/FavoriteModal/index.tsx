@@ -1,17 +1,13 @@
-import { FavoriteContent } from '../FavoriteContent'
-import { ModalStyle } from './style'
+import { FavoriteContent } from "../FavoriteContent";
+import { ModalStyled } from "./style";
 
-
-export function ModalFavorite(){
-
-    return(
-        <ModalStyle>
-            <div>
-                <FavoriteContent/>
-            </div>
-
-        </ModalStyle>
-
-
-    )
-}
+export function ModalFavorite() {
+    
+  return (
+    <ModalStyled>
+      <div>
+        <FavoriteContent />
+      </div>
+    </ModalStyled>
+  );
+};

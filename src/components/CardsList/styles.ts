@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ListStyle = styled.ul`
+export const ListStyled = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

@@ -3,7 +3,7 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { SectionStyle } from "./styles";
+import { SectionStyled } from "./styles";
 import brazilMap from "../../assets/brazilMap.svg";
 import { useContext } from "react";
 import { SearchContext } from "../../contexts/SearchContext";
@@ -27,7 +27,7 @@ export function Brazil() {
   ];
   
   return (
-    <SectionStyle>
+    <SectionStyled>
       <h2>Brasil</h2>
       <TableContainer>
         <Table>
@@ -44,6 +44,6 @@ export function Brazil() {
       <picture>
         <img src={brazilMap} alt="Mapa do Brasil" />
       </picture>
-    </SectionStyle>
+    </SectionStyled>
   );
-}
+};

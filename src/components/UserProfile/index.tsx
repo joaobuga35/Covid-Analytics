@@ -1,16 +1,16 @@
-import { SectionStyle, UserFavoriteStyled, UserStyle } from "./styles";
+import { SectionStyled, UserFavoriteStyled, UserStyled } from "./styles";
 import { Button, CircularProgress } from "@mui/material";
 import { FavoriteCard } from "../FavoriteCard";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
-
 export function UserProfile() {
-  const { favorites,waitFavorite,logedUser,logout } = useContext(UserContext);
+  const { favorites, waitFavorite, logedUser, logout } =
+    useContext(UserContext);
 
   return (
-    <SectionStyle>
-      <UserStyle>
+    <SectionStyled>
+      <UserStyled>
         <div>
           {logedUser.img ? (
             <img
@@ -24,12 +24,17 @@ export function UserProfile() {
               title={logedUser.name}
             />
           ) : (
-            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" />
+            <img
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+              alt="foto de perfil padrão"
+            />
           )}
         </div>
         <h2>{logedUser.name}</h2>
-        <Button variant="contained" onClick={()=>logout()}>Logout</Button>
-      </UserStyle>
+        <Button variant="contained" onClick={() => logout()}>
+          Logout
+        </Button>
+      </UserStyled>
       <UserFavoriteStyled>
         <h2>Favoritos</h2>
         {waitFavorite ? (
@@ -46,6 +51,6 @@ export function UserProfile() {
           </ul>
         )}
       </UserFavoriteStyled>
-    </SectionStyle>
+    </SectionStyled>
   );
-}
+};

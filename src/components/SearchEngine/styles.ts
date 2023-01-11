@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSearch = styled.section`
+export const SearchStyled = styled.section`
   background-color: var(--gray-1);
   min-height: 568px;
   width: 100%;
