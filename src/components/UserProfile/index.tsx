@@ -5,8 +5,8 @@ import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 export function UserProfile() {
-  const { favorites, waitFavorite, logedUser, logout } =
-    useContext(UserContext);
+  const { favorites, waitFavorite, logedUser, logout } = useContext(UserContext);
+  const photoUserDefault = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
 
   return (
     <SectionStyled>
@@ -18,14 +18,14 @@ export function UserProfile() {
               onError={({ currentTarget }) => {
                 currentTarget.onerror = null;
                 currentTarget.src =
-                  "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
+                photoUserDefault;
               }}
               alt={logedUser.name}
               title={logedUser.name}
             />
           ) : (
             <img
-              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+              src={photoUserDefault}
               alt="foto de perfil padrão"
             />
           )}

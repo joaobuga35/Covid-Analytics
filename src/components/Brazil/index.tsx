@@ -43,9 +43,6 @@ export function Brazil({ setOpen }: iBrazilModalInterface) {
           </TableBody>
         </Table>
       </TableContainer>
-      <picture>
-        <img src={brazilMap} alt="Mapa do Brasil" />
-      </picture>
       <Button
         variant="text"
         aria-label="olhar conteúdo"
@@ -54,6 +51,9 @@ export function Brazil({ setOpen }: iBrazilModalInterface) {
       >
         Detalhes
       </Button>
+      <picture>
+        <img src={brazilMap} alt="Mapa do Brasil" />
+      </picture>
     </SectionStyled>
   );
 }
