@@ -9,10 +9,9 @@ main {
     margin-top: 1rem;
     padding: 0 1rem;
     margin: 32px;
-    
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1029px) {
     main {
         flex-direction: column;
         align-items: center;

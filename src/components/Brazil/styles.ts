@@ -5,16 +5,15 @@ export const SectionStyle = styled.section`
   border-radius: var(--radius-3);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 0 26px; 
+  width: 100%;
+  padding: 8px;
+  align-items: center;
 
-
-  
-
-  @media (max-width: 720px) {
-    width: 100%;
-    padding: 8px;
+  > div {
+    display: flex;
+    justify-content: center;
   }
 
   > h2 {
@@ -24,20 +23,22 @@ export const SectionStyle = styled.section`
     font-size: var(--title-2);
     text-align: center;
     margin-bottom: var(--margin-bottom-h2);
-    margin-top: var(--margin-top-H2)
+    margin-top: var(--margin-top-H2);
   }
 
   > picture {
     display: flex;
     justify-content: center;
+    padding-bottom: 75px;
   }
 
   table {
     margin-bottom: 100px;
     background-color: var(--white);
+    max-width: 222px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1029px) {
     width: 225px;
   }
 `;

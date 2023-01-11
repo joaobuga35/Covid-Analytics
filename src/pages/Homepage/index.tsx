@@ -1,11 +1,11 @@
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
-import { HomepageStyled } from "./styles";
+import { HomePageStyled } from "./styles";
 
 export function Homepage() {
   return (
-    <HomepageStyled>
+    <HomePageStyled>
       <Header colorTitle="white" />
       <div>
         <p>
@@ -24,6 +24,6 @@ export function Homepage() {
           </div>
         </div>
       </div>
-    </HomepageStyled>
+    </HomePageStyled>
   );
 }

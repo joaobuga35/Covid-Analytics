@@ -147,7 +147,7 @@ export function Register() {
 
         <span>Já possui conta?</span>
 
-        <Link to="/login">Entre</Link>
+        <Link to="/login">Acessar</Link>
       </form>
     </RegisterStyled>
   );
