@@ -1,6 +1,8 @@
+import { AxiosResponse } from "axios";
 import { createContext, useEffect, useState } from "react";
 import { listMapsUfs } from "../../dataBase/brazilMaps";
 import { apiCovid } from "../../services/CovidBr/api";
+import { api } from "../../services/User/api";
 import { iSearchContext, iSearchProviderProps, iStates } from "./types";
 
 export const SearchContext = createContext<iSearchContext>(
@@ -12,9 +14,17 @@ export function SearchProvider({ children }: iSearchProviderProps) {
   const [search, setSearch] = useState("" as string);
   const [filterList, setFilterList] = useState([] as iStates[]);
 
-  function findMapImg(uf: string) {
-    const currState = listMapsUfs.find(({ state }) => uf === state);
-    return currState!.map;
+  async function findMapImg(uf: string): Promise<string | undefined> {
+    try {
+      const resp = await api.get(`listMapsUfs?state=${uf}`)
+      if(resp.data){
+        const currState:string = resp.data[0].map
+        return currState
+      }
+    } catch (error) {
+      console.error(error);
+    }
+    //const currState = listMapsUfs.find(({ state }) => uf === state);
   }
 
   async function getApi() {

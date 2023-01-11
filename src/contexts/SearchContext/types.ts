@@ -18,5 +18,5 @@ export interface iSearchContext {
   filterList: iStates[];
   setSearch: (search: string) => void;
   valueSearch: () => void;
-  findMapImg: (uf: string) => string;
+  findMapImg: (uf: string) => string ;
 }
