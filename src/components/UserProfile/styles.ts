@@ -8,8 +8,8 @@ export const SectionStyle = styled.section`
   gap: 2rem;
   width: 250px;
   justify-content: space-between;
-  
-  @media (max-width: 720px) {
+
+  @media (max-width: 1029px) {
     width: 100%;
   }
 
@@ -18,15 +18,13 @@ export const SectionStyle = styled.section`
     font-size: var(--title-2);
     color: var(--gray-3);
     font-weight: 700;
-    
-
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     width: 80%;
     text-align: center;
     margin-bottom: var(--margin-bottom-h2);
-    margin-top: var(--margin-top-H2)
+    margin-top: var(--margin-top-H2);
   }
 
   & > div:nth-child(1) {
@@ -52,7 +50,6 @@ export const SectionStyle = styled.section`
     background-color: var(--gray-1);
     height: 50%;
   }
-  
 `;
 
 export const UserStyle = styled.div`
@@ -65,17 +62,13 @@ export const UserStyle = styled.div`
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
-      background-image:url("https://img2.gratispng.com/20180331/eow/kisspng-computer-icons-user-clip-art-user-5abf13db298934.2968784715224718991702.jpg");
+    background-image: url("https://img2.gratispng.com/20180331/eow/kisspng-computer-icons-user-clip-art-user-5abf13db298934.2968784715224718991702.jpg");
 
-
-
-    img{
+    img {
       object-fit: cover;
       width: 100%;
       transition: 0.3s;
-      
     }
-    
 
     :hover {
       transition: 0.3s;
@@ -96,7 +89,7 @@ export const UserStyle = styled.div`
 
 export const UserFavoriteStyled = styled.div`
   ul {
-    max-height: 80%;
+    max-height: 180px;
     width: 80%;
     margin-top: 3ch;
     display: flex;
@@ -104,6 +97,5 @@ export const UserFavoriteStyled = styled.div`
     gap: 1ch;
     overflow-y: auto;
     padding: 1rem;
-    
   }
 `;
