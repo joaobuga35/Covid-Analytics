@@ -49,7 +49,7 @@ export function Brazil({ setOpen }: iBrazilModalInterface) {
             Tenha acesso a mais informações sobre todo o território nacional
           </legend>
           <Button
-            variant="contained"
+            variant="text"
             aria-label="olhar conteúdo"
             size="large"
             onClick={() => setOpen(true)}
