@@ -7,7 +7,7 @@ export const FavoriteStyled = styled.section`
 
   & > section > div:first-of-type {
     width: 174px;
-    height: 162px;
+    height: 210px;
     background: var(--white);
     padding: 23px 3px 3px 3px;
     box-shadow: 0px 4px 4px 0px #00000040;
@@ -44,8 +44,22 @@ export const FavoriteStyled = styled.section`
     top: 22px;
     left: 90%;
   }
+  
+  button:nth-child(2), .iconContainer{
+    width: 100%;
+    height: 36px;
+    background-color: #25D366;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    box-shadow: 0px 1px 4px 0px #00000040;
+    transition: 0.2s;
 
-  button:nth-child(2) {
+    :hover{
+      background-color: #1ec75d;
+    }
+  }
+
+  button:nth-child(3) {
     width: 100%;
   }
 
@@ -75,4 +89,5 @@ export const FavoriteStyled = styled.section`
       align-items: flex-start;
     }
   }
+
 `;
