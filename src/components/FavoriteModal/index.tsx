@@ -6,7 +6,7 @@ export function ModalFavorite(){
 
     return(
         <ModalStyle>
-            <div className='modal'>
+            <div>
                 <FavoriteContent/>
             </div>
 

@@ -15,18 +15,9 @@ export const RegisterStyled = styled.div`
   align-items: center;
   flex-direction: column;
 
-  h1 {
-    color: var(--white);
-    font-size: var(--title-header);
-    text-align: center;
-    margin-bottom: 16px;
-    font-weight: 700;
-    font-family: var(--font-family-3);
-  }
-
   h2 {
     color: var(--white);
-    font-size: var(--title-1);
+    font-size: 25px;
     text-align: center;
     margin-bottom: 16px;
     font-weight: 700;
@@ -42,25 +33,35 @@ export const RegisterStyled = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 40%;
+    width: 70%;
     text-align: center;
-    max-width: 600px;
+    max-width: 580px;
+
     button {
       font-size: var(--font-button);
       font-family: var(--font-family-1);
     }
+
     span {
       color: var(--black);
       font-size: var(--name-states);
       font-weight: 400;
       font-family: var(--font-family-1);
     }
+
+    div {
+      border-radius: 5px;
+      > div:nth-child(2) {
+        border-radius: 5px;
+      }
+    }
+
     input {
       background-color: white;
+      border-radius: 5px;
     }
 
     a {
-      
       cursor: pointer;
       font-family: var(--font-family-1);
       font-size: var(--font-button);
@@ -78,11 +79,19 @@ export const RegisterStyled = styled.div`
       padding-left: 1rem;
       padding-bottom: 1rem;
     }
+
+    > div:nth-child(5) {
+      > label {
+        margin-left: 13px;
+        margin-top: 6px;
+        z-index: 10;
+      }
+    }
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     form {
-      width: 70%;
+      width: 40%;
     }
   }
 `;

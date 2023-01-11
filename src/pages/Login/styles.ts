@@ -17,7 +17,7 @@ export const LoginStyled = styled.div`
 
   h2 {
     color: var(--white);
-    font-size: var(--title-1);
+    font-size: 25px;
     text-align: center;
     margin-bottom: 16px;
     font-weight: 900;
@@ -32,25 +32,40 @@ export const LoginStyled = styled.div`
     border: 1px solid rgba(255, 255, 255, 0.18);
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 40%;
+    gap: 30px;
+    width: 70%;
     text-align: center;
-    max-width: 600px;
+    max-width: 580px;
 
     Button {
+      height: 56px;
       font-size: var(--font-button);
       font-family: "inter";
     }
+
     span {
       color: var(--black);
       font-size: var(--name-states);
       font-weight: 400;
       font-family: "inter";
     }
+
+    > div {
+      height: 40px;
+      border-radius: 5px;
+    }
+
+    > div:nth-child(2) {
+      height: 40px;
+      border-radius: 5px;
+    }
+
     Input {
       background-color: white;
       font-family: "inter";
+      border-radius: 5px;
     }
+
     a {
       cursor: pointer;
       font-family: "inter";
@@ -61,9 +76,9 @@ export const LoginStyled = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     form {
-      width: 70%;
+      width: 40%;
     }
   }
 `;

@@ -3,26 +3,26 @@ import styled from "styled-components";
 export const ListStyle = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 26px;
-  padding-bottom:5px;
+  padding-bottom: 5px;
   row-gap: 20px;
   overflow-y: auto;
-  max-height:550px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  max-width: 100%;
+  max-height: 550px;
 
-  @media (max-width: 720px) {
-    &{
-      flex-wrap: nowrap;
-      overflow-x: scroll;
-      max-width: 100%;
-    }
-  }
-  
   h2 {
     font-family: var(--font-family-1);
-    font-size: var(--name-states);
+    font-size: 20px;
     font-weight: 700;
     text-align: center;
+    color: var(--gray-3);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 25px 0 35px 0;
   }
 
   td {
@@ -44,15 +44,6 @@ export const ListStyle = styled.ul`
   table {
     background-color: var(--white);
   }
-  
-  /* .MuiTableCell-body {
-    border: none;
-    padding: 5px 0;
-    font-family: var(--font-family-1);
-    font-size: var(--name-states);
-    font-weight: 400;
-    color: var(--gray-2);
-  } */
 
   button {
     width: 100%;
@@ -61,5 +52,31 @@ export const ListStyle = styled.ul`
     font-size: 16px;
     font-weight: 400;
     text-align: center;
+  }
+
+  @media (min-width: 720px) {
+    & {
+      flex-wrap: wrap;
+      max-height: 640px;
+      justify-content: center;
+    }
+
+    li {
+      flex: 1 300px;
+      max-width: 43%;
+    }
+  }
+
+  @media (min-width: 1029px) {
+    li {
+      max-width: 43%;
+      flex: 1 1 250px;
+    }
+  }
+
+  @media (min-width: 1162px) {
+    li {
+      max-width: 45%;
+    }
   }
 `;
