@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivLoader = styled.div`
+export const DivLoaderStyled = styled.div`
   width: 100%;
   height: 100vh;
   position: fixed;

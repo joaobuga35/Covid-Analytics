@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export interface iSearchProviderProps {
   children: ReactNode;
-};
+}
   
 export interface iStates {
   uid: number;
@@ -11,7 +11,7 @@ export interface iStates {
   cases: number;
   deaths: number;
   suspects: number;
-};
+}
       
 export interface iSearchContext {
   states: iStates[];
@@ -19,4 +19,4 @@ export interface iSearchContext {
   setSearch: (search: string) => void;
   valueSearch: () => void;
   findMapImg: (uf: string) => string | undefined;
-};
+}

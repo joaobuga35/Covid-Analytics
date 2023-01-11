@@ -3,14 +3,14 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { SectionStyle } from "./styles";
+import { SectionStyled } from "./styles";
 import brazilMap from "../../assets/brazilMap.svg";
 import { useContext } from "react";
 import { SearchContext } from "../../contexts/SearchContext";
 import { Button } from "@mui/material";
 import { iBrazilModalInterface } from "./types";
 
-export function Brazil({setOpen}: iBrazilModalInterface) {
+export function Brazil({ setOpen }: iBrazilModalInterface) {
   const { states } = useContext(SearchContext);
 
   const brazilData = [
@@ -29,7 +29,7 @@ export function Brazil({setOpen}: iBrazilModalInterface) {
   ];
 
   return (
-    <SectionStyle>
+    <SectionStyled>
       <h2>Brasil</h2>
       <TableContainer>
         <Table>
@@ -54,6 +54,6 @@ export function Brazil({setOpen}: iBrazilModalInterface) {
       >
         Detalhes
       </Button>
-    </SectionStyle>
+    </SectionStyled>
   );
 }

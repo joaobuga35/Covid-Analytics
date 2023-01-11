@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-export const ListStyle = styled.ul`
+export const ListStyled = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-top: 26px;
   padding-bottom: 5px;
   row-gap: 20px;
   overflow-y: auto;
@@ -12,6 +11,7 @@ export const ListStyle = styled.ul`
   overflow-x: scroll;
   max-width: 100%;
   max-height: 550px;
+  margin: 26px 10px 0 10px;
 
   h2 {
     font-family: var(--font-family-1);
@@ -59,6 +59,8 @@ export const ListStyle = styled.ul`
       flex-wrap: wrap;
       max-height: 640px;
       justify-content: center;
+      overflow-x:hidden ;
+      margin: 26px 0;
     }
 
     li {
@@ -76,6 +78,7 @@ export const ListStyle = styled.ul`
 
   @media (min-width: 1162px) {
     li {
+
       max-width: 45%;
     }
   }

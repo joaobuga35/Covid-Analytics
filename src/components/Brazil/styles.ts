@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-export const SectionStyle = styled.section`
+export const SectionStyled = styled.section`
   background-color: var(--gray-1);
   border-radius: var(--radius-3);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
-  padding: 8px;
+  padding:0 8px 8px 8px;
   align-items: center;
 
   > div {

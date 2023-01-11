@@ -4,7 +4,7 @@ import { Brazil } from "../../components/Brazil";
 import { Header } from "../../components/Header";
 import { SearchEngine } from "../../components/SearchEngine";
 import { UserProfile } from "../../components/UserProfile";
-import { DashboardStyles } from "./styles";
+import { DashboardStyled } from "./styles";
 import { UserContext } from "../../contexts/UserContext";
 import { FavoriteContext } from "../../contexts/FavoriteContext";
 import { ModalFavorite } from "../../components/FavoriteModal";
@@ -17,13 +17,13 @@ export function Dashboard() {
   const [brModal, setBrModal] = useState(false);
 
   useEffect(() => {
-    if (!logedUser.id) {
+    if (!logedUser) {
       navigate("/login");
-    }
+    };
   }, []);
 
   return (
-      <DashboardStyles>
+      <DashboardStyled>
         {openModal && <ModalFavorite />}
         {brModal && <ModalBrazil setOpen={setBrModal}/>}
         <Header marginTop="8px" />
@@ -32,6 +32,6 @@ export function Dashboard() {
           <SearchEngine />
           <Brazil setOpen={setBrModal}/>
         </main>
-      </DashboardStyles>
+      </DashboardStyled>
   );
-}
+};
