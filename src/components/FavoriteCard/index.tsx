@@ -1,16 +1,15 @@
-import { FavoriteCardStyle } from "./styles";
+import { FavoriteCardStyled } from "./styles";
 import { AiOutlineEye } from "react-icons/ai";
 import { iFavCartTypes } from "./types";
 import { Button } from "@mui/material";
 import { useContext } from "react";
 import { FavoriteContext } from "../../contexts/FavoriteContext";
 
-// Faltou a key
 export function FavoriteCard({ name, id }: iFavCartTypes) {
   const { filterFavorite } = useContext(FavoriteContext);
 
   return (
-    <FavoriteCardStyle key={Math.random()}>
+    <FavoriteCardStyled key={Math.random()}>
       <h3>{name}</h3>
       <Button
         variant="contained"
@@ -21,6 +20,6 @@ export function FavoriteCard({ name, id }: iFavCartTypes) {
       >
         <AiOutlineEye />
       </Button>
-    </FavoriteCardStyle>
+    </FavoriteCardStyled>
   );
-}
+};

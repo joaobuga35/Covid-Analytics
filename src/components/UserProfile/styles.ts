@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SectionStyle = styled.section`
+export const SectionStyled = styled.section`
   min-width: 220px;
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@ export const SectionStyle = styled.section`
   }
 `;
 
-export const UserStyle = styled.div`
+export const UserStyled = styled.div`
   div {
     width: 175px;
     height: 175px;

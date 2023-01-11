@@ -35,9 +35,5 @@ export const GlobalStyle = createGlobalStyle`
 
     --margin-top-H2:3ch;
     --margin-bottom-h2: 28px;
-
-    
-   
   }
-  
 `;

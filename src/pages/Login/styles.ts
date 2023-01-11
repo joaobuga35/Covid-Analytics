@@ -32,7 +32,7 @@ export const LoginStyled = styled.div`
     border: 1px solid rgba(255, 255, 255, 0.18);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     width: 70%;
     text-align: center;
     max-width: 580px;
@@ -53,6 +53,10 @@ export const LoginStyled = styled.div`
     > div {
       height: 40px;
       border-radius: 5px;
+      p{
+        color: #AC0003;
+        font-weight:500;
+      }
     }
 
     > div:nth-child(2) {

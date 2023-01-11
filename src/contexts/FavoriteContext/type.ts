@@ -4,7 +4,7 @@ import { iStates } from "../SearchContext/type";
 
 export interface iFavoriteProviderProps {
   children: ReactNode;
-  }
+}
 
 export interface iDataUser {
   userId:number;
