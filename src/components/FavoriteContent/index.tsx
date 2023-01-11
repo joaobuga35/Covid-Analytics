@@ -41,10 +41,10 @@ export function FavoriteContent(){
                     </Table>
                 </TableContainer>
                 <WhatsappShareButton url={`
-                Dados do estado ${dataModal[0].data.state}:
-                SUSPEITOS => ${dataModal[0].data.suspects} 
-                CASOS => ${dataModal[0].data.cases} 
-                MORTES => ${dataModal[0].data.deaths}
+                Dados atualizados do COVID em ${dataModal[0].data.state}:
+                ❓ SUSPEITOS => ${dataModal[0].data.suspects} 
+                🦠 CASOS => ${dataModal[0].data.cases} 
+                ☠️ MORTES => ${dataModal[0].data.deaths}
                 `} >
                     <div className="iconContainer">
                         <WhatsappIcon round size={"36px"} />
@@ -56,6 +56,4 @@ export function FavoriteContent(){
            </section>
         </FavoriteStyle>
     )
-   
-
 }
