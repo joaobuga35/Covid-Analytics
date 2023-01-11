@@ -15,7 +15,7 @@ export function Dashboard() {
   const { openModal } = useContext(FavoriteContext)
   
   useEffect(() => {
-    if(!logedUser.id){
+    if(!logedUser){
       navigate('/login');
     };   
 
