@@ -10,7 +10,7 @@ export function SearchEngine() {
 
   return (
     <SearchStyled>
-      <h2>Buscar Estados</h2>
+      <h2>Buscar estados</h2>
       <div>
         <input
           type="text"

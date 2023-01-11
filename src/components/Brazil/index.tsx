@@ -3,7 +3,7 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { SectionStyled } from "./styles";
+import { ButtonContainerStyled, SectionStyled } from "./styles";
 import brazilMap from "../../assets/brazilMap.svg";
 import { useContext } from "react";
 import { SearchContext } from "../../contexts/SearchContext";
@@ -31,26 +31,33 @@ export function Brazil({ setOpen }: iBrazilModalInterface) {
   return (
     <SectionStyled>
       <h2>Brasil</h2>
-      <TableContainer>
-        <Table>
-          <TableBody>
-            {brazilData.map((info, index) => (
-              <TableRow key={index}>
-                <TableCell>{info.name}</TableCell>
-                <TableCell align="right">{info.value}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <Button
-        variant="text"
-        aria-label="olhar conteúdo"
-        size="small"
-        onClick={() => setOpen(true)}
-      >
-        Detalhes
-      </Button>
+      <div>
+        <TableContainer>
+          <Table>
+            <TableBody>
+              {brazilData.map((info, index) => (
+                <TableRow key={index}>
+                  <TableCell>{info.name}</TableCell>
+                  <TableCell align="right">{info.value}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <ButtonContainerStyled>
+          <legend>
+            Tenha acesso a mais informações sobre todo o território nacional
+          </legend>
+          <Button
+            variant="contained"
+            aria-label="olhar conteúdo"
+            size="large"
+            onClick={() => setOpen(true)}
+          >
+            Detalhes
+          </Button>
+        </ButtonContainerStyled>
+      </div>
       <picture>
         <img src={brazilMap} alt="Mapa do Brasil" />
       </picture>
