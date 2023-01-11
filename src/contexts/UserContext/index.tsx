@@ -1,7 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-
 import { api } from "../../services/User/api";
 import { SubmitHandler } from "react-hook-form";
 import {
@@ -55,8 +54,8 @@ export function UserContextProvider({ children }: iContextProviderProps) {
       });
     } finally {
       setLoading(false);
-    }
-  }
+    };
+  };
 
   const userLoginApi: SubmitHandler<iLoginData> = async (data) => {
     try {
@@ -72,7 +71,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         progress: undefined,
         theme: "light",
       });
-      FavoriteApiGet()
+      FavoriteApiGet();
 
       if (response.data.accessToken) {
         localStorage.setItem("@TOKEN:", response.data.accessToken);
@@ -90,7 +89,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
           progress: undefined,
           theme: "light",
         });
-      }
+      };
     } catch (error) {
       console.error(error);
       toast.error("Algo deu errado com a sua requisição, Tente mais tarde", {
@@ -105,7 +104,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
       });
     } finally {
       setLoading(false);
-    }
+    };
   };
 
   useEffect(() => {
@@ -116,7 +115,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
       if (!token || !userID) {
         setRoutesLoading(false);
         return;
-      }
+      };
 
       try {
         setLoading(true);
@@ -132,33 +131,32 @@ export function UserContextProvider({ children }: iContextProviderProps) {
       } finally {
         setLoading(false);
         setRoutesLoading(false);
-      }
-    }
+      };
+    };
     checkUser();
   }, []);
 
-  async function FavoriteApiGet () {
-    setWaitFavorite(true)
-      try {
-          const resp = await api.get(`favoriteIds?userId=${idUser}`,{
-            headers:{
-              Authorization: `Bearer ${token}`,  
-            }
-          });
-          setFavorites(resp.data);
-          setWaitFavorite(false)
-      }
-       catch (error) {
-          console.error(error);
-          setWaitFavorite(false);
-      }
+  async function FavoriteApiGet() {
+    setWaitFavorite(true);
+    try {
+      const resp = await api.get(`favoriteIds?userId=${idUser}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        }
+      });
+      setFavorites(resp.data);
+      setWaitFavorite(false);
+    } catch (error) {
+      console.error(error);
+      setWaitFavorite(false);
+    };
   };
 
-  function logout(){
+  function logout() {
     localStorage.removeItem("@TOKEN:");
     localStorage.removeItem("@USER_ID:");
-    navigate('/login')
-  }
+    navigate("/login");
+  };
 
   return (
     <UserContext.Provider
@@ -170,14 +168,14 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         loading,
         routesLoading,
         FavoriteApiGet,
-        waitFavorite, 
+        waitFavorite,
         setWaitFavorite,
         favorites,
         setFavorites,
-        logout
+        logout,
       }}
     >
       {children}
     </UserContext.Provider>
   );
-}
+};

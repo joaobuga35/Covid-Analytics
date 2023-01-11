@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FavoriteCardStyle = styled.li`
+export const FavoriteCardStyled = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;

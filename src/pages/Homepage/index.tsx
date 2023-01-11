@@ -4,6 +4,7 @@ import { Header } from "../../components/Header";
 import { HomePageStyled } from "./styles";
 
 export function Homepage() {
+  
   return (
     <HomePageStyled>
       <Header colorTitle="white" />
@@ -16,7 +17,7 @@ export function Homepage() {
         <div>
           <div>
             <Link to={"/login"}>
-               <Button variant="contained">Login</Button>
+              <Button variant="contained">Login</Button>
             </Link>
             <Link to={"/register"}>
               <Button variant="contained">Registro</Button>
@@ -26,4 +27,4 @@ export function Homepage() {
       </div>
     </HomePageStyled>
   );
-}
+};

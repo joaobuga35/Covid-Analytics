@@ -5,8 +5,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import { useContext } from "react";
 import { FavoriteContext } from "../../contexts/FavoriteContext";
-import { FavoriteStyle } from "./style";
-import x from '../../assets/x.png'
+import { FavoriteStyled } from "./style";
+import x from "../../assets/x.png";
 import { SearchContext } from "../../contexts/SearchContext";
 import Button from "@mui/material/Button";
 import { WhatsappShareButton, WhatsappIcon } from "react-share"

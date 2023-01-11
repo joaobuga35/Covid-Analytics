@@ -3,12 +3,14 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { SectionStyle } from "./styles";
+import { SectionStyled } from "./styles";
 import brazilMap from "../../assets/brazilMap.svg";
 import { useContext } from "react";
 import { SearchContext } from "../../contexts/SearchContext";
+import { Button } from "@mui/material";
+import { iBrazilModalInterface } from "./types";
 
-export function Brazil() {
+export function Brazil({ setOpen }: iBrazilModalInterface) {
   const { states } = useContext(SearchContext);
 
   const brazilData = [
@@ -25,9 +27,9 @@ export function Brazil() {
       value: states.reduce((acc, curr) => acc + curr.cases, 0),
     },
   ];
-  
+
   return (
-    <SectionStyle>
+    <SectionStyled>
       <h2>Brasil</h2>
       <TableContainer>
         <Table>
@@ -44,6 +46,14 @@ export function Brazil() {
       <picture>
         <img src={brazilMap} alt="Mapa do Brasil" />
       </picture>
-    </SectionStyle>
+      <Button
+        variant="text"
+        aria-label="olhar conteúdo"
+        size="small"
+        onClick={() => setOpen(true)}
+      >
+        Detalhes
+      </Button>
+    </SectionStyled>
   );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { iTitleHeader } from "./types";
 
-export const MainTitle = styled.header<iTitleHeader>`
+export const MainTitleStyled = styled.header<iTitleHeader>`
   display: flex;
   flex-direction: column;
   align-items: center;
