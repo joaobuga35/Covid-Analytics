@@ -36,4 +36,30 @@ export const GlobalStyle = createGlobalStyle`
     --margin-top-H2:3ch;
     --margin-bottom-h2: 28px;
   }
+
+  ::-webkit-scrollbar {
+      width: 10px;
+  } 
+
+  ::-webkit-scrollbar-track {
+      margin: 6px;
+      
+  }
+    
+  ::-webkit-scrollbar-thumb {   
+      border-radius: 40px;
+      transform: scale(3);
+  }
+
+  ::-webkit-scrollbar-thumb:hover { 
+      background-color: var(--gray-5);   
+  }
+
+  ::-webkit-scrollbar-thumb:not(:hover) {   
+      background-color: var(--gray-4);   
+  }
+
+  ::-webkit-scrollbar-thumb:window-inactive {
+      background-color: #0083d1;
+  }
 `;
