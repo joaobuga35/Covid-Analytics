@@ -1,8 +1,9 @@
 import { SectionStyle, UserFavoriteStyled, UserStyle } from "./styles";
 import { Button, CircularProgress } from "@mui/material";
-import { FavoriteCard } from "./FavoriteCard";
+import { FavoriteCard } from "../FavoriteCard";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
+
 
 export function UserProfile() {
   const { favorites,waitFavorite,logedUser,logout } = useContext(UserContext);
