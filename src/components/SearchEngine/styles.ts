@@ -17,7 +17,6 @@ export const StyledSearch = styled.section`
         
     } 
     
-    
     h2 {
         font-family: var(--font-family-1);
         font-size: var(--title-2);

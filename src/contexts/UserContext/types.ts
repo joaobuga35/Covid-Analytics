@@ -40,4 +40,5 @@ export interface iUserProviderValue{
   setWaitFavorite: (waitFavorite: boolean) => void,
   favorites: iDataUserGet[],
   setFavorites: (favorites: iDataUserGet[]) => void,
+  logout: () => void; 
 };
