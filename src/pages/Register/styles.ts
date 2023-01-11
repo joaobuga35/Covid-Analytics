@@ -55,8 +55,8 @@ export const RegisterStyled = styled.div`
       height: 40px;
       border-radius: 5px;
       p{
-        color: #AC0003;
         font-weight:500;
+        color: var(--white) !important;
       }
     }
 
