@@ -7,8 +7,10 @@ import { SectionStyle } from "./styles";
 import brazilMap from "../../assets/brazilMap.svg";
 import { useContext } from "react";
 import { SearchContext } from "../../contexts/SearchContext";
+import { Button } from "@mui/material";
+import { iBrazilModalInterface } from "./types";
 
-export function Brazil() {
+export function Brazil({setOpen}: iBrazilModalInterface) {
   const { states } = useContext(SearchContext);
 
   const brazilData = [
@@ -25,7 +27,7 @@ export function Brazil() {
       value: states.reduce((acc, curr) => acc + curr.cases, 0),
     },
   ];
-  
+
   return (
     <SectionStyle>
       <h2>Brasil</h2>
@@ -44,6 +46,14 @@ export function Brazil() {
       <picture>
         <img src={brazilMap} alt="Mapa do Brasil" />
       </picture>
+      <Button
+        variant="text"
+        aria-label="olhar conteúdo"
+        size="small"
+        onClick={() => setOpen(true)}
+      >
+        Detalhes
+      </Button>
     </SectionStyle>
   );
 }
