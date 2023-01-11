@@ -1,12 +1,12 @@
 import { SectionStyle, UserFavoriteStyled, UserStyle } from "./styles";
-import { CircularProgress } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import { FavoriteCard } from "../FavoriteCard";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
+
 export function UserProfile() {
-  const { favorites, waitFavorite } = useContext(UserContext);
-  const { logedUser } = useContext(UserContext);
+  const { favorites,waitFavorite,logedUser,logout } = useContext(UserContext);
 
   return (
     <SectionStyle>
@@ -28,6 +28,7 @@ export function UserProfile() {
           )}
         </div>
         <h2>{logedUser.name}</h2>
+        <Button variant="contained" onClick={()=>logout()}>Logout</Button>
       </UserStyle>
       <UserFavoriteStyled>
         <h2>Favoritos</h2>

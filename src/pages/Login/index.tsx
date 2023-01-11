@@ -1,5 +1,5 @@
 import { LoginStyled } from "./styles";
-import { CircularProgress, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
