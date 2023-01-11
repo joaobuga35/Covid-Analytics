@@ -5,6 +5,11 @@ export const GraphListStyled = styled.ul`
   flex-direction: column;
   gap: 1.5rem;
   overflow-y: auto;
+  >div {
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--gray-2);
+    overflow-x: visible;
+  }
   h3{
     text-align: center;
     font-family: var(--font-family-1);
