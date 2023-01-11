@@ -35,9 +35,6 @@ export const MainTitle = styled.header<iTitleHeader>`
   }
 
   @media (min-width: 1024px) {
-    flex-direction: row;
-    gap: 24px;
-    align-items: flex-start;
     justify-content: center;
   }
 `;

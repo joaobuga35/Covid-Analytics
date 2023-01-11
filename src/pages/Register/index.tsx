@@ -15,6 +15,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { registerFormSchema } from "./schema";
 import { SubmitHandler } from "react-hook-form";
 import { iRegisterData } from "../../contexts/UserContext/types";
+import { Loader } from "../../components/Loader";
 
 export function Register() {
   const brazilStates = [
@@ -47,7 +48,7 @@ export function Register() {
     { uf: "TO", nome: "Tocantins" },
   ];
 
-  const { userRegisterApi } = useContext(UserContext);
+  const { userRegisterApi, loading } = useContext(UserContext);
 
   const {
     register,
@@ -73,6 +74,7 @@ export function Register() {
 
   return (
     <RegisterStyled>
+      {loading && <Loader />}
       <Header colorTitle="var(--white)" marginTop="1rem" />
       <h2>Registro</h2>
       <form onSubmit={handleSubmit(submitRegisterFunction)}>
@@ -145,7 +147,7 @@ export function Register() {
 
         <span>Já possui conta?</span>
 
-        <Link to="/login">Entre</Link>
+        <Link to="/login">Acessar</Link>
       </form>
     </RegisterStyled>
   );

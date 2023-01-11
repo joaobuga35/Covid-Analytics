@@ -25,9 +25,9 @@ export const GlobalStyle = createGlobalStyle`
     --title-header-mobile:50px;
     --title-1: 40px;
     --title-2: 30px;
-    --name-states:12px;
+    --name-states: 12px;
     --label:14px;
-    --font-button:30px;
+    --font-button:20px;
 
     --radius-1:2px;
     --radius-2:5px;
@@ -35,6 +35,8 @@ export const GlobalStyle = createGlobalStyle`
 
     --margin-top-H2:3ch;
     --margin-bottom-h2: 28px;
+
+    
    
   }
   

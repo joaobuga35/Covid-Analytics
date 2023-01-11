@@ -8,16 +8,22 @@ import { UserContext } from "../../contexts/UserContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginFormSchema } from "./schema";
+import { Loader } from "../../components/Loader";
 
 export function Login() {
   const { userLoginApi, loading } = useContext(UserContext);
 
-  const { register, handleSubmit, formState: { errors }, } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: yupResolver(loginFormSchema),
   });
 
   return (
     <LoginStyled>
+      {loading && <Loader />}
       <Header colorTitle="var(--white)" marginTop="1rem" />
       <h2>Login</h2>
       <form onSubmit={handleSubmit(userLoginApi)}>
@@ -40,8 +46,8 @@ export function Login() {
           {...register("password")}
         />
 
-        <Button variant="contained" type="submit" disabled={loading} >
-          {loading ? <CircularProgress color="error" /> : "Entrar"}
+        <Button variant="contained" type="submit" disabled={loading}>
+          Entrar
         </Button>
         <span>Não possui conta?</span>
         <Link to="/register">Cadastre-se</Link>

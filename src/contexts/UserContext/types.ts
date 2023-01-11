@@ -1,3 +1,5 @@
+import { iDataUserGet } from "../FavoriteContext/type";
+
 export interface iContextProviderProps{
   children: React.ReactNode;
 };
@@ -33,4 +35,9 @@ export interface iUserProviderValue{
   setLogedUser: (logedUser: iLogedUser) => void,
   loading: boolean,
   routesLoading: boolean,
+  FavoriteApiGet: () => void,
+  waitFavorite: boolean,
+  setWaitFavorite: (waitFavorite: boolean) => void,
+  favorites: iDataUserGet[],
+  setFavorites: (favorites: iDataUserGet[]) => void,
 };
