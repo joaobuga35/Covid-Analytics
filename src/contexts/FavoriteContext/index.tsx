@@ -2,14 +2,14 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { api } from "../../services/User/api";
 import { SearchContext } from "../SearchContext";
-import { iStates } from "../SearchContext/type";
+import { iStates } from "../SearchContext/types";
 import { UserContext } from "../UserContext";
 import {
   iFavoriteContext,
   iFavoriteProviderProps,
   iDataUser,
   iDataUserGet,
-} from "./type";
+} from "./types";
 
 export const FavoriteContext = createContext<iFavoriteContext>(
   {} as iFavoriteContext
@@ -20,7 +20,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
   const { FavoriteApiGet, favorites, setWaitFavorite } =
     useContext(UserContext);
 
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false as boolean);
   const [dataModal, setDataModal] = useState([] as iDataUserGet[] | []);
 
   const token = localStorage.getItem("@TOKEN:");
@@ -78,15 +78,15 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
           progress: undefined,
           theme: "light",
         });
-      };
+      }
     }
-  };
+  }
 
   function filterFavorite(id: number) {
     const filter = favorites.filter((el) => el.data.uid == id);
     setDataModal(filter);
     setOpenModal(true);
-  };
+  }
 
   async function deleteFavoriteId(id: number) {
     const token = localStorage.getItem("@TOKEN:");
@@ -100,8 +100,8 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
       setOpenModal(false);
     } catch (error) {
       console.error(error);
-    };
-  };
+    }
+  }
 
   return (
     <FavoriteContext.Provider
@@ -118,4 +118,4 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
       {children}
     </FavoriteContext.Provider>
   );
-};
+}

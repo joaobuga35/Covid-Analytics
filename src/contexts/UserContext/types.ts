@@ -1,10 +1,10 @@
-import { iDataUserGet } from "../FavoriteContext/type";
+import { iDataUserGet } from "../FavoriteContext/types";
 
-export interface iContextProviderProps{
+export interface iContextProviderProps {
   children: React.ReactNode;
 }
 
-export interface iLogedUser{
+export interface iLogedUser {
   email: string;
   id: number;
   img: string;
@@ -19,14 +19,14 @@ export type iRegisterData = {
   passwordConfirm?: string;
   state?: string;
   img?: string | undefined;
-}
+};
 
-export interface iLoginData{
+export interface iLoginData {
   email: string;
   password: string;
 }
 
-export interface iUserProviderValue{
+export interface iUserProviderValue {
   userRegisterApi: (data: iRegisterData | any) => void;
   userLoginApi: (data: iLoginData | any) => void;
   logedUser: iLogedUser;
@@ -38,5 +38,5 @@ export interface iUserProviderValue{
   setWaitFavorite: (waitFavorite: boolean) => void;
   favorites: iDataUserGet[];
   setFavorites: (favorites: iDataUserGet[]) => void;
-  logout: () => void; 
+  logout: () => void;
 }

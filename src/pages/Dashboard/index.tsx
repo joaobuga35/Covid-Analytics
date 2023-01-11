@@ -14,7 +14,7 @@ export function Dashboard() {
   const navigate = useNavigate();
   const { logedUser } = useContext(UserContext);
   const { openModal } = useContext(FavoriteContext);
-  const [brModal, setBrModal] = useState(false);
+  const [brModal, setBrModal] = useState(false as boolean);
 
   useEffect(() => {
     if (!logedUser) {
