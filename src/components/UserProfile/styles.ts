@@ -79,11 +79,12 @@ export const UserStyled = styled.div`
       object-fit: cover;
       width: 100%;
       transition: 0.3s;
+      background-color: white;
     }
 
     :hover {
       transition: 0.3s;
-      border-color: rgba(0, 0, 0, 0.01);
+      border-color: white;
 
       img {
         transition: 0.3s;
