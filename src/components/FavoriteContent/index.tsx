@@ -15,7 +15,7 @@ import { WhatsappShareButton, WhatsappIcon } from "react-share"
 export function FavoriteContent(){
     const { dataModal,setOpenModal,deleteFavoriteId } = useContext(FavoriteContext);
     const { filterMap } = useContext(SearchContext);
-    console.log(filterMap)
+    
     return(
         <FavoriteStyled>
            <button onClick={()=>setOpenModal(false)}><img src={x} alt="close button" /></button>

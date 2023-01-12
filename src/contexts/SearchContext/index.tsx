@@ -15,10 +15,9 @@ export function SearchProvider({ children }: iSearchProviderProps) {
 
   async function findMapImg(uf: string) {
     try {
-      const resp = await api.get(`listMapsUfs?state=${uf}`)
-      console.log(resp)
-      const currState:string = resp!.data[0]!.map
-      setfilterMap(currState)
+      const resp = await api.get(`listMapsUfs?state=${uf}`);
+      const currState:string = resp!.data[0]!.map;
+      setfilterMap(currState);
     } catch (error) {
       console.error(error);
     }

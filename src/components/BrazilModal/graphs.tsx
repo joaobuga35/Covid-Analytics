@@ -9,9 +9,9 @@ import { LineChart } from "../Graphs/Line";
 import { PieChart } from "../Graphs/Pie";
 import { ChartContext } from "../../contexts/ChartContext";
 import { GraphListStyled } from "./styles";
-import { TitleChartStyle } from "../Graphs/styles";
+import { TitleChartStyled } from "../Graphs/styles";
 import { FormControl, InputLabel, NativeSelect } from "@mui/material";
-import { brazilStates } from "../../dataBase/brazilStates";
+import { iStates } from "../../contexts/SearchContext/types";
 
 export function RenderGraphs() {
   const {
@@ -64,15 +64,15 @@ export function RenderGraphs() {
               }}
               onChange={(e) => filterState(e.target.value)}
             >
-              <option key={"none"}>Todos</option>
-              {brazilStates.map((ele, index) => (
-                <option key={index} value={ele.uf}>
-                  {ele.nome}
+              <option key="none">Todos</option>
+              {states.map((el, index) => (
+                <option key={index} value={el.uf}>
+                  {el.state}
                 </option>
               ))}
             </NativeSelect>
           </FormControl>
-      <TitleChartStyle>Número de casos por estado</TitleChartStyle>
+      <TitleChartStyled>Número de casos por estado</TitleChartStyled>
       {show &&
         render.map((state, index) => (
           <LineChart
@@ -87,18 +87,24 @@ export function RenderGraphs() {
             ]}
           />
         ))}
-      <TitleChartStyle>
+      <TitleChartStyled>
         Número de casos proporcionais por estado
-      </TitleChartStyle>
+      </TitleChartStyled>
       <TableContainer>
         <Table>
           <TableBody>
-            {render.map((info, index) => (
+            {render
+            .map((info) => {
+              info.percentageCases = showPercentageProportionalCasesState(info);
+              return info
+            })
+            .sort((b: iStates, a: iStates) => a.percentageCases! - b.percentageCases!)
+            .map((info, index) => (
               <TableRow key={index}>
                 <TableCell>{info.state}</TableCell>
                 <TableCell align="right">
                   {(
-                    showPercentageProportionalCasesState(info)?.toFixed(2) + ""
+                    info.percentageCases?.toFixed(2) + ""
                   ).replace(".", ",")}
                   %
                 </TableCell>
@@ -107,18 +113,24 @@ export function RenderGraphs() {
           </TableBody>
         </Table>
       </TableContainer>
-      <TitleChartStyle>
+      <TitleChartStyled>
         Número de mortes proporcionais por estado
-      </TitleChartStyle>
+      </TitleChartStyled>
       <TableContainer>
         <Table>
           <TableBody>
-            {render.map((info, index) => (
+            {render
+            .map((info) => {
+              info.percentageDeaths = showPercentageProportionalDeathsState(info);
+              return info
+            })
+            .sort((b: iStates, a: iStates) => a.percentageDeaths! - b.percentageDeaths!)
+            .map((info, index) => (
               <TableRow key={index}>
                 <TableCell>{info.state}</TableCell>
                 <TableCell align="right">
                   {(
-                    showPercentageProportionalDeathsState(info)?.toFixed(2) + ""
+                    info.percentageDeaths?.toFixed(2) + ""
                   ).replace(".", ",")}
                   %
                 </TableCell>

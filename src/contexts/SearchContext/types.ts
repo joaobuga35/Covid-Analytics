@@ -11,6 +11,8 @@ export interface iStates {
   cases: number;
   deaths: number;
   suspects: number;
+  percentageDeaths?: number;
+  percentageCases?: number;
 }
       
 export interface iSearchContext {
