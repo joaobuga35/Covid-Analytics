@@ -6,11 +6,14 @@ export const FavoriteStyled = styled.section`
   padding-bottom: 40px;
 
   & > section > div:first-of-type {
-    width: 174px;
-    height: 210px;
+    width: 277px;
+    height: 241px;
     background: var(--white);
     padding: 23px 3px 3px 3px;
     box-shadow: 0px 4px 4px 0px #00000040;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   section:first-of-type {
@@ -22,16 +25,9 @@ export const FavoriteStyled = styled.section`
   }
 
   & > h2 {
-    background: var(--color-primary);
-    font-family: Inter;
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
+    font-size: var(--title-2);
     color: var(--gray-3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 25px 0 35px 0;
+    font-family: var(--font-family-1);
   }
 
   & > button:nth-child(1) {
@@ -44,17 +40,18 @@ export const FavoriteStyled = styled.section`
     top: 22px;
     left: 90%;
   }
-  
-  button:nth-child(2), .iconContainer{
+
+  div>button:nth-child(2),
+  .iconContainer {
     width: 100%;
     height: 36px;
-    background-color: #25D366;
+    background-color: #25d366;
     border-radius: 4px;
     margin-bottom: 8px;
     box-shadow: 0px 1px 4px 0px #00000040;
     transition: 0.2s;
 
-    :hover{
+    :hover {
       background-color: #1ec75d;
     }
   }
@@ -77,9 +74,8 @@ export const FavoriteStyled = styled.section`
     height: 273px;
     width: 277px;
     border-radius: 15px;
-    border: 5px solid #FFFFFF;
+    border: 5px solid #ffffff;
     box-shadow: 0px 4px 4px 0px #00000040;
-
   }
 
   @media (min-width: 770px) {
@@ -89,9 +85,8 @@ export const FavoriteStyled = styled.section`
     section:first-of-type {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      align-items: flex-start;
+      justify-content: space-evenly;
+      align-items: center;
     }
   }
-
 `;

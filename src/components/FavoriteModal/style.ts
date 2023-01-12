@@ -17,6 +17,7 @@ export const ModalStyled = styled.section`
     background-color: white;
     border-radius: 30px;
     background-color: var(--gray-1);
+    padding: 1.5rem 1rem;
   }
 
   @media (min-width: 500px) {
