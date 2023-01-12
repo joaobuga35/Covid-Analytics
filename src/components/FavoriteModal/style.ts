@@ -13,7 +13,7 @@ export const ModalStyled = styled.section`
 
   & > div {
     margin: 0 auto;
-    width: 90%;
+    width: 70%;
     background-color: white;
     border-radius: 30px;
     background-color: var(--gray-1);
@@ -23,8 +23,8 @@ export const ModalStyled = styled.section`
   @media (min-width: 500px) {
     & > div {
       margin: 0 auto;
-      width: 90%;
-      max-width: 675px;
+      width: 70%;
+      max-width: 600px;
     }
   }
 `;

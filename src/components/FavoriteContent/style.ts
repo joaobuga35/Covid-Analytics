@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FavoriteStyled = styled.section`
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 
   & > section > div:first-of-type {
     width: 277px;
@@ -78,14 +78,13 @@ export const FavoriteStyled = styled.section`
     box-shadow: 0px 4px 4px 0px #00000040;
   }
 
-  @media (min-width: 770px) {
+  @media (min-width: 840px) {
     width: 100%;
-    padding: 23px 3px 48px 3px;
 
     section:first-of-type {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
     }
   }
