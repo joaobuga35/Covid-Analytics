@@ -4,13 +4,14 @@ export const RegisterStyled = styled.div`
   width: 100%;
   height: 160vh;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: center;
   background-attachment: fixed;
-  background-size: 150% 150%;
+  background-size: auto 150%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  padding: 2rem 0;
 
   h2 {
     color: var(--white);
@@ -30,9 +31,10 @@ export const RegisterStyled = styled.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 70%;
     text-align: center;
     max-width: 580px;
+    width: 90%;
+    max-width: 450px;
 
     button {
       font-size: var(--font-button);
@@ -94,14 +96,6 @@ export const RegisterStyled = styled.div`
         z-index: 10;
 
       }
-    }
-  }
-
-
-
-  @media (min-width: 768px) {
-    form {
-      width: 40%;
     }
   }
 `;

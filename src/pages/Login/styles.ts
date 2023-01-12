@@ -4,12 +4,12 @@ export const LoginStyled = styled.div`
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: center;
   background-attachment: fixed;
-  background-size: 150% 150%;
+  background-size: auto 150%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 
   h2 {
@@ -30,9 +30,10 @@ export const LoginStyled = styled.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 70%;
     text-align: center;
     max-width: 580px;
+    width: 90%;
+    max-width: 450px;
 
     button {
       height: 56px;
@@ -74,12 +75,6 @@ export const LoginStyled = styled.div`
       color: var(--white);
       width: max-content;
       margin: 0 auto;
-    }
-  }
-
-  @media (min-width: 768px) {
-    form {
-      width: 40%;
     }
   }
 `;

@@ -14,8 +14,8 @@ import { WhatsappShareButton, WhatsappIcon } from "react-share"
 
 export function FavoriteContent(){
     const { dataModal,setOpenModal,deleteFavoriteId } = useContext(FavoriteContext);
-    const { findMapImg } = useContext(SearchContext);
-    
+    const { filterMap } = useContext(SearchContext);
+    console.log(filterMap)
     return(
         <FavoriteStyled>
            <button onClick={()=>setOpenModal(false)}><img src={x} alt="close button" /></button>
@@ -52,7 +52,7 @@ export function FavoriteContent(){
                 </WhatsappShareButton>
                 <Button variant="contained" onClick={()=>deleteFavoriteId(dataModal[0].id)}>Excluir</Button>
             </div>
-            <img src={findMapImg(dataModal[0].data.uf)} alt="estado brasileiro" />
+            <img src={filterMap} alt="estado brasileiro" />
            </section>
         </FavoriteStyled>
     )

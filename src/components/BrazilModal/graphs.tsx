@@ -10,6 +10,8 @@ import { PieChart } from "../Graphs/Pie";
 import { ChartContext } from "../../contexts/ChartContext";
 import { GraphListStyled } from "./styles";
 import { TitleChartStyle } from "../Graphs/styles";
+import { FormControl, InputLabel, NativeSelect } from "@mui/material";
+import { brazilStates } from "../../dataBase/brazilStates";
 
 export function RenderGraphs() {
   const {
@@ -20,11 +22,21 @@ export function RenderGraphs() {
   } = useContext(ChartContext);
   const [show, setShow] = useState(false);
   const { states } = useContext(SearchContext);
+  const [render, setRender] = useState(states)
   useEffect(() => {
     if (brazilCases) {
       setShow(true);
     }
   }, [brazilCases]);
+
+  function filterState(state: string){
+    if(state === "Todos"){
+      setRender(states)
+    } else {
+      const filteredStatesList = states.filter(uf => state === uf.uf)
+      setRender(filteredStatesList)
+    }
+  }
 
   return (
     <GraphListStyled>
@@ -40,11 +52,29 @@ export function RenderGraphs() {
           ]}
         />
       )}
-      <TitleChartStyle>
-        Número de casos por estado
-      </TitleChartStyle>
+      <FormControl fullWidth>
+            <InputLabel variant="standard" htmlFor="uncontrolled-native">
+              Filtrar por estado
+            </InputLabel>
+            <NativeSelect
+              defaultValue={30}
+              inputProps={{
+                name: "age",
+                id: "uncontrolled-native",
+              }}
+              onChange={(e) => filterState(e.target.value)}
+            >
+              <option key={"none"}>Todos</option>
+              {brazilStates.map((ele, index) => (
+                <option key={index} value={ele.uf}>
+                  {ele.nome}
+                </option>
+              ))}
+            </NativeSelect>
+          </FormControl>
+      <TitleChartStyle>Número de casos por estado</TitleChartStyle>
       {show &&
-        states.map((state, index) => (
+        render.map((state, index) => (
           <LineChart
             key={index}
             title={state.state}
@@ -57,10 +87,13 @@ export function RenderGraphs() {
             ]}
           />
         ))}
+      <TitleChartStyle>
+        Número de casos proporcionais por estado
+      </TitleChartStyle>
       <TableContainer>
         <Table>
           <TableBody>
-            {states.map((info, index) => (
+            {render.map((info, index) => (
               <TableRow key={index}>
                 <TableCell>{info.state}</TableCell>
                 <TableCell align="right">
@@ -74,10 +107,13 @@ export function RenderGraphs() {
           </TableBody>
         </Table>
       </TableContainer>
+      <TitleChartStyle>
+        Número de mortes proporcionais por estado
+      </TitleChartStyle>
       <TableContainer>
         <Table>
           <TableBody>
-            {states.map((info, index) => (
+            {render.map((info, index) => (
               <TableRow key={index}>
                 <TableCell>{info.state}</TableCell>
                 <TableCell align="right">
