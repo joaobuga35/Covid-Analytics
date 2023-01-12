@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import { iLine } from "../types";
 import { generateColors } from "../../../functions/reusable";
-import { TitleChartStyle } from "../styles";
+import { TitleChartStyled } from "../styles";
 ChartJS.register(
   Title,
   Tooltip,
@@ -40,7 +40,7 @@ export function LineChart({ info, labels, title }: iLine) {
 
   return (
     <div>
-      <TitleChartStyle>{title}</TitleChartStyle>
+      <TitleChartStyled>{title}</TitleChartStyled>
       <Line data={data} />
     </div>
   );

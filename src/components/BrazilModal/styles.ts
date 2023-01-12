@@ -6,8 +6,7 @@ export const GraphListStyled = styled.ul`
   gap: 1.5rem;
   overflow-y: auto;
   >div {
-    padding-bottom: 4px;
-    border-bottom: 1px solid var(--gray-2);
+    padding-bottom: 35px;
     overflow-x: visible;
   }
   h3{
