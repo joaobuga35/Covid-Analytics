@@ -3,8 +3,7 @@ import { GraphModalStyled } from "./styles";
 import { AiOutlineClose } from "react-icons/ai";
 import { iBrazilModalInterface } from "../Brazil/types";
 
-export function ModalBrazil({setOpen}: iBrazilModalInterface) {
-  
+export function ModalBrazil({ setOpen }: iBrazilModalInterface) {
   return (
     <GraphModalStyled>
       <div>
