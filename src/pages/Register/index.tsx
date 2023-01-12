@@ -1,4 +1,4 @@
-import { RegisterStyled } from "./styles";
+import { BodyStyled, RegisterStyled } from "./styles";
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
