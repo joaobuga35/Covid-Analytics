@@ -30,3 +30,9 @@ export interface iDataBrazilHandle {
   total: number;
   state?: string;
 }
+
+export interface iStatePopulation {
+  state: string;
+  population: number;
+  percentagePopulation: number;
+}

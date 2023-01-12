@@ -1,10 +1,5 @@
 import { RegisterStyled } from "./styles";
-import {
-  FormControl,
-  InputLabel,
-  NativeSelect,
-  TextField,
-} from "@mui/material";
+import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
@@ -16,7 +11,6 @@ import { registerFormSchema } from "./schema";
 import { SubmitHandler } from "react-hook-form";
 import { iRegisterData } from "../../contexts/UserContext/types";
 import { Loader } from "../../components/Loader";
-import { brazilStates } from "../../dataBase/brazilStates";
 
 export function Register() {
   const { userRegisterApi, loading } = useContext(UserContext);
@@ -82,25 +76,6 @@ export function Register() {
           }
           {...register("passwordConfirm")}
         />
-        <FormControl fullWidth>
-          <InputLabel variant="standard" htmlFor="uncontrolled-native">
-            estado
-          </InputLabel>
-          <NativeSelect
-            defaultValue={30}
-            inputProps={{
-              name: "age",
-              id: "uncontrolled-native",
-            }}
-            {...register("state")}
-          >
-            {brazilStates.map((ele, index) => (
-              <option key={index} value={ele.uf}>
-                {ele.nome}
-              </option>
-            ))}
-          </NativeSelect>
-        </FormControl>
         <TextField
           id="image"
           label="Imagem"
@@ -117,4 +92,4 @@ export function Register() {
       </form>
     </RegisterStyled>
   );
-};
+}

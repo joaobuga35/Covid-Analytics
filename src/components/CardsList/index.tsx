@@ -43,7 +43,7 @@ export function ListCard() {
               </TableBody>
             </Table>
           </TableContainer>
-          <Button variant="contained" onClick={() => searchFavoriteId(el.uid)}>
+          <Button variant="contained" size="small" onClick={() => searchFavoriteId(el.uid)}>
             Favoritar
           </Button>
         </li>
