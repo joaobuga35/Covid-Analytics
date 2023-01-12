@@ -12,10 +12,9 @@ import { WhatsappShareButton, WhatsappIcon } from "react-share";
 import { ModalHeader } from "../ModalHeader";
 
 export function FavoriteContent() {
-  const { dataModal, setOpenModal, deleteFavoriteId } =
-    useContext(FavoriteContext);
+  const { dataModal, setOpenModal, deleteFavoriteId } = useContext(FavoriteContext);
   const { filterMap } = useContext(SearchContext);
-  
+
   return (
     <FavoriteStyled>
       <ModalHeader callback={setOpenModal} title={dataModal[0].data.state} />

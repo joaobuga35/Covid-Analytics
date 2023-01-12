@@ -16,13 +16,13 @@ export function SearchProvider({ children }: iSearchProviderProps) {
   async function findMapImg(uf: string) {
     try {
       const resp = await api.get(`listMapsUfs?state=${uf}`);
-      const currState:string = resp!.data[0]!.map;
+      const currState: string = resp!.data[0]!.map;
       setfilterMap(currState);
     } catch (error) {
       console.error(error);
     }
   }
-  
+
   async function getApi() {
     try {
       const resp = await apiCovid.get("/api/report/v1");
@@ -53,7 +53,7 @@ export function SearchProvider({ children }: iSearchProviderProps) {
         valueSearch,
         filterList,
         filterMap,
-        findMapImg
+        findMapImg,
       }}
     >
       {children}

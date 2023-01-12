@@ -51,14 +51,14 @@ export const SectionStyled = styled.section`
     height: 50%;
   }
 
-  p{
+  p {
     text-align: center;
     line-height: 25px;
     color: #858585;
     font-family: var(--font-family-1);
-    >svg{
+    > svg {
       font-size: 35px;
-      margin-top:15px;
+      margin-top: 15px;
     }
   }
 `;

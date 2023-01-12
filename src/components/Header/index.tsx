@@ -3,7 +3,6 @@ import logo from "../../assets/logoOficial.png";
 import { iTitleHeader } from "./types";
 
 export function Header({ colorTitle, marginTop }: iTitleHeader) {
-
   return (
     <MainTitleStyled colorTitle={colorTitle} marginTop={marginTop}>
       <div>
@@ -12,4 +11,4 @@ export function Header({ colorTitle, marginTop }: iTitleHeader) {
       <h1>Covid Analytics</h1>
     </MainTitleStyled>
   );
-};
+}

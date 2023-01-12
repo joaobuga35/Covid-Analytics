@@ -51,8 +51,8 @@ export const RegisterStyled = styled.div`
     > div {
       height: 40px;
       border-radius: 5px;
-      p{
-        font-weight:500;
+      p {
+        font-weight: 500;
         color: var(--white) !important;
       }
     }
@@ -79,9 +79,9 @@ export const RegisterStyled = styled.div`
       margin: 0 auto;
     }
 
-     div:nth-child(5) {
+    div:nth-child(5) {
       background-color: white;
-    } 
+    }
 
     select {
       background-color: white;
@@ -94,7 +94,6 @@ export const RegisterStyled = styled.div`
         margin-left: 13px;
         margin-top: 6px;
         z-index: 10;
-
       }
     }
   }

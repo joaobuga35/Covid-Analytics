@@ -18,7 +18,7 @@ export function ListCard() {
     data = filterList;
   } else {
     data = states;
-  };
+  }
 
   return (
     <ListStyled>
@@ -43,11 +43,15 @@ export function ListCard() {
               </TableBody>
             </Table>
           </TableContainer>
-          <Button variant="contained" size="small" onClick={() => searchFavoriteId(el.uid)}>
+          <Button
+            variant="contained"
+            size="small"
+            onClick={() => searchFavoriteId(el.uid)}
+          >
             Favoritar
           </Button>
         </li>
       ))}
     </ListStyled>
   );
-};
+}

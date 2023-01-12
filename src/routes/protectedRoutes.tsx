@@ -7,7 +7,7 @@ export function ProtectedRoutes() {
 
   if (routesLoading) {
     return null;
-  };
+  }
 
   return logedUser?.id ? <Outlet /> : <Navigate to={"/login"} replace={true} />;
-};
+}

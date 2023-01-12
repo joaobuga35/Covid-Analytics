@@ -53,25 +53,25 @@ export function RenderGraphs() {
         />
       )}
       <FormControl fullWidth>
-            <InputLabel variant="standard" htmlFor="uncontrolled-native">
-              Filtrar por estado
-            </InputLabel>
-            <NativeSelect
-              defaultValue={30}
-              inputProps={{
-                name: "age",
-                id: "uncontrolled-native",
-              }}
-              onChange={(e) => filterState(e.target.value)}
-            >
-              <option key="none">Todos</option>
-              {states.map((el, index) => (
-                <option key={index} value={el.uf}>
-                  {el.state}
-                </option>
-              ))}
-            </NativeSelect>
-          </FormControl>
+        <InputLabel variant="standard" htmlFor="uncontrolled-native">
+          Filtrar por estado
+        </InputLabel>
+        <NativeSelect
+          defaultValue={30}
+          inputProps={{
+            name: "age",
+            id: "uncontrolled-native",
+          }}
+          onChange={(e) => filterState(e.target.value)}
+        >
+          <option key="none">Todos</option>
+          {states.map((el, index) => (
+            <option key={index} value={el.uf}>
+              {el.state}
+            </option>
+          ))}
+        </NativeSelect>
+      </FormControl>
       <TitleChartStyled>Número de casos por estado</TitleChartStyled>
       {show &&
         render.map((state, index) => (
@@ -94,22 +94,23 @@ export function RenderGraphs() {
         <Table>
           <TableBody>
             {render
-            .map((info) => {
-              info.percentageCases = showPercentageProportionalCasesState(info);
-              return info
-            })
-            .sort((b: iStates, a: iStates) => a.percentageCases! - b.percentageCases!)
-            .map((info, index) => (
-              <TableRow key={index}>
-                <TableCell>{info.state}</TableCell>
-                <TableCell align="right">
-                  {(
-                    info.percentageCases?.toFixed(2) + ""
-                  ).replace(".", ",")}
-                  %
-                </TableCell>
-              </TableRow>
-            ))}
+              .map((info) => {
+                info.percentageCases =
+                  showPercentageProportionalCasesState(info);
+                return info;
+              })
+              .sort(
+                (b: iStates, a: iStates) =>
+                  a.percentageCases! - b.percentageCases!
+              )
+              .map((info, index) => (
+                <TableRow key={index}>
+                  <TableCell>{info.state}</TableCell>
+                  <TableCell align="right">
+                    {(info.percentageCases?.toFixed(2) + "").replace(".", ",")}%
+                  </TableCell>
+                </TableRow>
+              ))}
           </TableBody>
         </Table>
       </TableContainer>
@@ -120,22 +121,24 @@ export function RenderGraphs() {
         <Table>
           <TableBody>
             {render
-            .map((info) => {
-              info.percentageDeaths = showPercentageProportionalDeathsState(info);
-              return info
-            })
-            .sort((b: iStates, a: iStates) => a.percentageDeaths! - b.percentageDeaths!)
-            .map((info, index) => (
-              <TableRow key={index}>
-                <TableCell>{info.state}</TableCell>
-                <TableCell align="right">
-                  {(
-                    info.percentageDeaths?.toFixed(2) + ""
-                  ).replace(".", ",")}
-                  %
-                </TableCell>
-              </TableRow>
-            ))}
+              .map((info) => {
+                info.percentageDeaths =
+                  showPercentageProportionalDeathsState(info);
+                return info;
+              })
+              .sort(
+                (b: iStates, a: iStates) =>
+                  a.percentageDeaths! - b.percentageDeaths!
+              )
+              .map((info, index) => (
+                <TableRow key={index}>
+                  <TableCell>{info.state}</TableCell>
+                  <TableCell align="right">
+                    {(info.percentageDeaths?.toFixed(2) + "").replace(".", ",")}
+                    %
+                  </TableCell>
+                </TableRow>
+              ))}
           </TableBody>
         </Table>
       </TableContainer>
@@ -151,4 +154,4 @@ export function RenderGraphs() {
       />
     </GraphListStyled>
   );
-}
+};

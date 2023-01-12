@@ -52,7 +52,7 @@ export const LoginStyled = styled.div`
       height: 40px;
       border-radius: 5px;
       p {
-        font-weight:500;
+        font-weight: 500;
         color: var(--white) !important;
       }
     }

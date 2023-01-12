@@ -4,10 +4,9 @@ import { Header } from "../../components/Header";
 import { BodyStyled, HomePageStyled } from "./styles";
 
 export function Homepage() {
-  
   return (
     <HomePageStyled>
-      <BodyStyled/>
+      <BodyStyled />
       <Header colorTitle="white" />
       <div>
         <p>
@@ -28,4 +27,4 @@ export function Homepage() {
       </div>
     </HomePageStyled>
   );
-};
+}

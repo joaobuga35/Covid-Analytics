@@ -28,14 +28,14 @@ export function Register() {
       email: data!.email,
       name: data!.name,
       password: data!.password,
-      img: data!.img
+      img: data!.img,
     };
     await userRegisterApi(formatedData);
   };
 
   return (
     <RegisterStyled>
-      <BodyStyled/>
+      <BodyStyled />
       {loading && <Loader />}
       <Header colorTitle="var(--white)" marginTop="1rem" />
       <h2>Registro</h2>

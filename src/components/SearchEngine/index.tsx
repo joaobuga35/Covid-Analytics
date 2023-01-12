@@ -25,4 +25,4 @@ export function SearchEngine() {
       <ListCard />
     </SearchStyled>
   );
-};
+}
