@@ -1,11 +1,8 @@
-import styled from "styled-components";
-
-import background from "../../assets/background.jpg";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const RegisterStyled = styled.div`
   width: 100%;
-  height: auto;
-  background-image: url(${background});
+  height: 160vh;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -100,5 +97,12 @@ export const RegisterStyled = styled.div`
 
       }
     }
+  }
+`;
+
+export const BodyStyled = createGlobalStyle`
+  body {
+    background-position: 25%;
+    transition: 0.5s;
   }
 `;

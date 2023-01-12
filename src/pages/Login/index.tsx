@@ -1,4 +1,4 @@
-import { LoginStyled } from "./styles";
+import { BodyStyled, LoginStyled } from "./styles";
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -23,6 +23,7 @@ export function Login() {
 
   return (
     <LoginStyled>
+      <BodyStyled/>
       {loading && <Loader />}
       <Header colorTitle="var(--white)" marginTop="1rem" />
       <h2>Login</h2>

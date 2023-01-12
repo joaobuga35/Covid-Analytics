@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { Reset } from "./reset";
+import background from "../assets/background.jpg";
 
 export const GlobalStyle = createGlobalStyle`
  ${Reset};
@@ -41,14 +42,8 @@ export const GlobalStyle = createGlobalStyle`
       width: 10px;
   } 
 
-  ::-webkit-scrollbar-track {
-      margin: 6px;
-      
-  }
-    
   ::-webkit-scrollbar-thumb {   
       border-radius: 40px;
-      transform: scale(3);
   }
 
   ::-webkit-scrollbar-thumb:hover { 
@@ -61,5 +56,12 @@ export const GlobalStyle = createGlobalStyle`
 
   ::-webkit-scrollbar-thumb:window-inactive {
       background-color: #0083d1;
+  }
+
+  body {
+      background-image: url(${background});
+      background-size: 5000px;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
   }
 `;

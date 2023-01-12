@@ -1,10 +1,8 @@
-import styled from "styled-components";
-import background from "../../assets/background.jpg";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const HomePageStyled = styled.main`
   width: 100%;
   height: 100vh;
-  background-image: url(${background});
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -74,5 +72,12 @@ export const HomePageStyled = styled.main`
         padding: 30px;
       }
     }
+  }
+`;
+
+export const BodyStyled = createGlobalStyle`
+  body {
+    background-position: 50%;
+    transition: 0.5s;
   }
 `;

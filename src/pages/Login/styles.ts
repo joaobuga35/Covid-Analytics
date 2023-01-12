@@ -1,11 +1,8 @@
-import styled from "styled-components";
-
-import background from "../../assets/background.jpg";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const LoginStyled = styled.div`
   width: 100%;
   height: 100vh;
-  background-image: url(${background});
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -79,5 +76,12 @@ export const LoginStyled = styled.div`
       width: max-content;
       margin: 0 auto;
     }
+  }
+`;
+
+export const BodyStyled = createGlobalStyle`
+  body {
+    background-position: 10%;
+    transition: 0.5s;
   }
 `;
