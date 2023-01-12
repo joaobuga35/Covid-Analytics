@@ -17,6 +17,7 @@ export const ModalHeaderStyled = styled.header`
     font-size: 1.25rem;
     color: grey;
     cursor: pointer;
+    transition: 0.5s;
     :hover {
       color: red;
     }

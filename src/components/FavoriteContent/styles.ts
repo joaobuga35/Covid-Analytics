@@ -7,7 +7,7 @@ export const FavoriteStyled = styled.section`
 
   & > section > div:first-of-type {
     width: 277px;
-    height: 241px;
+    height: 265px;
     background: var(--white);
     padding: 23px 3px 3px 3px;
     box-shadow: 0px 4px 4px 0px #00000040;
@@ -40,7 +40,9 @@ export const FavoriteStyled = styled.section`
     top: 22px;
     left: 90%;
   }
-
+  div button:nth-child(2) {
+    transform: translateY(17px);
+  }
   div > button:nth-child(2),
   .iconContainer {
     width: 100%;
@@ -73,9 +75,14 @@ export const FavoriteStyled = styled.section`
   img:nth-child(2) {
     height: 273px;
     width: 277px;
-    border-radius: 15px;
+    border-radius: var(--radius-2);
     border: 5px solid #ffffff;
     box-shadow: 0px 4px 4px 0px #00000040;
+  }
+
+  .div_text {
+    border-radius: var(--radius-2);
+    padding: 8px !important;
   }
 
   @media (min-width: 840px) {

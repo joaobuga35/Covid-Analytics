@@ -5,7 +5,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import { useContext } from "react";
 import { FavoriteContext } from "../../contexts/FavoriteContext";
-import { FavoriteStyled } from "./style";
+import { FavoriteStyled } from "./styles";
 import { SearchContext } from "../../contexts/SearchContext";
 import Button from "@mui/material/Button";
 import { WhatsappShareButton, WhatsappIcon } from "react-share";
@@ -15,7 +15,7 @@ export function FavoriteContent() {
   const { dataModal, setOpenModal, deleteFavoriteId } =
     useContext(FavoriteContext);
   const { filterMap } = useContext(SearchContext);
-  console.log(filterMap);
+  
   return (
     <FavoriteStyled>
       <ModalHeader callback={setOpenModal} title={dataModal[0].data.state} />
