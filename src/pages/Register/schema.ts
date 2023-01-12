@@ -15,8 +15,6 @@ export const registerFormSchema = yup.object().shape({
     .string()
     .required("Digite sua senha novamente")
     .oneOf([yup.ref("password"), null], "As senhas devem ser iguais"),
-  state: yup
-    .string(),
   img: yup
     .string()
     

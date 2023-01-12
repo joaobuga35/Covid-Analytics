@@ -1,12 +1,13 @@
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
-import { HomePageStyled } from "./styles";
+import { BodyStyled, HomePageStyled } from "./styles";
 
 export function Homepage() {
   
   return (
     <HomePageStyled>
+      <BodyStyled/>
       <Header colorTitle="white" />
       <div>
         <p>

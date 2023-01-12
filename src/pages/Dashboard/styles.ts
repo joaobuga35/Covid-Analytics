@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const DashboardStyled = styled.div`
+  background-color: var(--white);
   main {
     margin: 0 auto;
     display: flex;

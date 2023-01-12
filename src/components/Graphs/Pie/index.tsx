@@ -10,7 +10,7 @@ export function PieChart({ values, labels, title }: iPizza) {
     datasets: [
       {
         data: values,
-        backgroundColor: values.map((el) => generateColors().color),
+        backgroundColor: values.map(() => generateColors().color),
       },
     ],
     labels: labels,

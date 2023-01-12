@@ -9,7 +9,6 @@ export interface iLogedUser {
   id: number;
   img: string;
   name: string;
-  state: string;
 }
 
 export type iRegisterData = {
@@ -17,7 +16,6 @@ export type iRegisterData = {
   name?: string;
   password?: string;
   passwordConfirm?: string;
-  state?: string;
   img?: string | undefined;
 };
 
