@@ -8,7 +8,7 @@ export const SectionStyled = styled.section`
   justify-content: space-between;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
-  padding:0 8px 8px 8px;
+  padding: 0 8px 8px 8px;
   align-items: center;
   > div > div:nth-child(1) {
     display: flex;
@@ -38,7 +38,7 @@ export const SectionStyled = styled.section`
 
   @media (min-width: 1029px) {
     width: 225px;
-    padding:0 20px 16px 20px;
+    padding: 0 20px 16px 20px;
   }
 `;
 

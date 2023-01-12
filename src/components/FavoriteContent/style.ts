@@ -41,7 +41,7 @@ export const FavoriteStyled = styled.section`
     left: 90%;
   }
 
-  div>button:nth-child(2),
+  div > button:nth-child(2),
   .iconContainer {
     width: 100%;
     height: 36px;

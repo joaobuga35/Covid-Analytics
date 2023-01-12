@@ -22,19 +22,19 @@ export function RenderGraphs() {
   } = useContext(ChartContext);
   const [show, setShow] = useState(false);
   const { states } = useContext(SearchContext);
-  const [render, setRender] = useState(states)
+  const [render, setRender] = useState(states);
   useEffect(() => {
     if (brazilCases) {
       setShow(true);
     }
   }, [brazilCases]);
 
-  function filterState(state: string){
-    if(state === "Todos"){
-      setRender(states)
+  function filterState(state: string) {
+    if (state === "Todos") {
+      setRender(states);
     } else {
-      const filteredStatesList = states.filter(uf => state === uf.uf)
-      setRender(filteredStatesList)
+      const filteredStatesList = states.filter((uf) => state === uf.uf);
+      setRender(filteredStatesList);
     }
   }
 
@@ -53,25 +53,25 @@ export function RenderGraphs() {
         />
       )}
       <FormControl fullWidth>
-            <InputLabel variant="standard" htmlFor="uncontrolled-native">
-              Filtrar por estado
-            </InputLabel>
-            <NativeSelect
-              defaultValue={30}
-              inputProps={{
-                name: "age",
-                id: "uncontrolled-native",
-              }}
-              onChange={(e) => filterState(e.target.value)}
-            >
-              <option key={"none"}>Todos</option>
-              {brazilStates.map((ele, index) => (
-                <option key={index} value={ele.uf}>
-                  {ele.nome}
-                </option>
-              ))}
-            </NativeSelect>
-          </FormControl>
+        <InputLabel variant="standard" htmlFor="uncontrolled-native">
+          Filtrar por estado
+        </InputLabel>
+        <NativeSelect
+          defaultValue={30}
+          inputProps={{
+            name: "age",
+            id: "uncontrolled-native",
+          }}
+          onChange={(e) => filterState(e.target.value)}
+        >
+          <option key={"none"}>Todos</option>
+          {brazilStates.map((ele, index) => (
+            <option key={index} value={ele.uf}>
+              {ele.nome}
+            </option>
+          ))}
+        </NativeSelect>
+      </FormControl>
       <TitleChartStyle>Número de casos por estado</TitleChartStyle>
       {show &&
         render.map((state, index) => (

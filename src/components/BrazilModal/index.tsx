@@ -7,7 +7,7 @@ export function ModalBrazil({ setOpen }: iBrazilModalInterface) {
   return (
     <GraphModalStyled>
       <div>
-        <ModalHeader title="Brasil Dados" callback={setOpen}/>
+        <ModalHeader title="Brasil Dados" callback={setOpen} />
         <RenderGraphs />
       </div>
     </GraphModalStyled>

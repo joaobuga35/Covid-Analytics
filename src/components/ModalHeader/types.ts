@@ -1,4 +1,4 @@
 export interface iModalHeader {
-    title: string,
-    callback: (openModal: boolean) => void
+  title: string;
+  callback: (openModal: boolean) => void;
 }

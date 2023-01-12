@@ -5,12 +5,12 @@ export const GraphListStyled = styled.ul`
   flex-direction: column;
   gap: 1.5rem;
   overflow-y: auto;
-  >div {
+  > div {
     padding-bottom: 4px;
     border-bottom: 1px solid var(--gray-2);
     overflow-x: visible;
   }
-  h3{
+  h3 {
     text-align: center;
     font-family: var(--font-family-1);
     font-size: var(--title-2);
@@ -41,10 +41,10 @@ export const GraphModalStyled = styled.div`
     flex-direction: column;
     gap: 1rem;
     > div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1ch;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1ch;
       > h2 {
         font-size: var(--title-2);
         color: var(--gray-3);

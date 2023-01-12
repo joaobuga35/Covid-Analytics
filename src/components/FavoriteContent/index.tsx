@@ -18,7 +18,7 @@ export function FavoriteContent() {
   console.log(filterMap);
   return (
     <FavoriteStyled>
-      <ModalHeader callback={setOpenModal} title={dataModal[0].data.state}/>
+      <ModalHeader callback={setOpenModal} title={dataModal[0].data.state} />
       <section>
         <div className="div_text">
           <TableContainer>
