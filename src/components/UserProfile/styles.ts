@@ -68,7 +68,7 @@ export const UserStyled = styled.div`
     width: 175px;
     height: 175px;
     border-radius: 50%;
-    border: 6px solid white;
+    border: 6px solid var(--white);
     overflow: hidden;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
@@ -79,11 +79,12 @@ export const UserStyled = styled.div`
       object-fit: cover;
       width: 100%;
       transition: 0.3s;
+      background-color: var(--white);
     }
 
     :hover {
       transition: 0.3s;
-      border-color: rgba(0, 0, 0, 0.01);
+      border-color: var(--white);
 
       img {
         transition: 0.3s;
