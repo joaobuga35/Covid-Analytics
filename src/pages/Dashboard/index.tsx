@@ -23,15 +23,15 @@ export function Dashboard() {
   }, []);
 
   return (
-      <DashboardStyled>
-        {openModal && <ModalFavorite />}
-        {brModal && <ModalBrazil setOpen={setBrModal}/>}
-        <Header marginTop="8px" />
-        <main>
-          <UserProfile />
-          <SearchEngine />
-          <Brazil setOpen={setBrModal}/>
-        </main>
-      </DashboardStyled>
+    <DashboardStyled>
+      {openModal && <ModalFavorite />}
+      {brModal && <ModalBrazil setOpen={setBrModal} />}
+      <Header marginTop="8px" />
+      <main>
+        <UserProfile />
+        <SearchEngine />
+        <Brazil setOpen={setBrModal} />
+      </main>
+    </DashboardStyled>
   );
-};
+}

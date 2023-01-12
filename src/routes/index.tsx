@@ -7,7 +7,6 @@ import { Register } from "../pages/Register";
 import { ProtectedRoutes } from "./protectedRoutes";
 
 export function RoutesMain() {
-
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
@@ -26,4 +25,4 @@ export function RoutesMain() {
       <Route path="*" element={<Navigate to={"/"} />} />
     </Routes>
   );
-};
+}

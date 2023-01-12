@@ -14,7 +14,9 @@ export const ChartContext = createContext<iChartContext>({} as iChartContext);
 export function ChartProvider({ children }: iChartProvider) {
   const [dataBrazil, setDataBrazil] = useState([] as iBrazilHistoryData[]);
   const [brazilCases, setBrazilCases] = useState([] as iDataBrazilHandle[]);
-  const [brazilPopulation, setBrazilPopulation] = useState([] as iStatePopulation[]);
+  const [brazilPopulation, setBrazilPopulation] = useState(
+    [] as iStatePopulation[]
+  );
 
   async function getBrazilHistoryData() {
     try {
@@ -80,11 +82,10 @@ export function ChartProvider({ children }: iChartProvider) {
     try {
       const resp = await api.get("/listBrazilDataPopulation");
       setBrazilPopulation(resp.data);
-    } catch(error) {
+    } catch (error) {
       console.error(error);
-    } 
+    }
   }
-  
 
   function showPopulationState(uf: string) {
     const currState = brazilPopulation.find(({ state }) => state === uf);

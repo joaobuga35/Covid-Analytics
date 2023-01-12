@@ -16,7 +16,7 @@ export const FavoriteContext = createContext<iFavoriteContext>(
 );
 
 export function FavoriteProvider({ children }: iFavoriteProviderProps) {
-  const { states,findMapImg } = useContext(SearchContext);
+  const { states, findMapImg } = useContext(SearchContext);
   const { favoriteApiGet, favorites, setWaitFavorite } =
     useContext(UserContext);
 
@@ -85,7 +85,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
 
   function filterFavorite(id: number) {
     const filter = favorites.filter((el) => el.data.uid === id);
-    setDataModal(filter)
+    setDataModal(filter);
     findMapImg(filter[0].data.uf);
     setOpenModal(true);
   }

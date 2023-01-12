@@ -43,7 +43,8 @@ export const FavoriteStyled = styled.section`
   div button:nth-child(2) {
     transform: translateY(17px);
   }
-  div > button:nth-child(2), .iconContainer {
+  div > button:nth-child(2),
+  .iconContainer {
     width: 100%;
     height: 36px;
     background-color: #25d366;

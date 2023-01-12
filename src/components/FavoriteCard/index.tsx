@@ -22,4 +22,4 @@ export function FavoriteCard({ name, id }: iFavCartTypes) {
       </Button>
     </FavoriteCardStyled>
   );
-};
+}

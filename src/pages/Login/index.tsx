@@ -23,7 +23,7 @@ export function Login() {
 
   return (
     <LoginStyled>
-      <BodyStyled/>
+      <BodyStyled />
       {loading && <Loader />}
       <Header colorTitle="var(--white)" marginTop="1rem" />
       <h2>Login</h2>
@@ -55,4 +55,4 @@ export function Login() {
       </form>
     </LoginStyled>
   );
-};
+}
