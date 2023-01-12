@@ -1,6 +1,4 @@
-import { AxiosResponse } from "axios";
 import { createContext, useEffect, useState } from "react";
-import { listMapsUfs } from "../../dataBase/brazilMaps";
 import { apiCovid } from "../../services/CovidBr/api";
 import { api } from "../../services/User/api";
 import { iSearchContext, iSearchProviderProps, iStates } from "./types";
@@ -13,20 +11,19 @@ export function SearchProvider({ children }: iSearchProviderProps) {
   const [states, setStates] = useState([] as iStates[]);
   const [search, setSearch] = useState("" as string);
   const [filterList, setFilterList] = useState([] as iStates[]);
+  const [filterMap, setfilterMap] = useState("" as string);
 
-  async function findMapImg(uf: string): Promise<string | undefined> {
+  async function findMapImg(uf: string) {
     try {
       const resp = await api.get(`listMapsUfs?state=${uf}`)
-      if(resp.data){
-        const currState:string = resp.data[0].map
-        return currState
-      }
+      console.log(resp)
+      const currState:string = resp!.data[0]!.map
+      setfilterMap(currState)
     } catch (error) {
       console.error(error);
     }
-    //const currState = listMapsUfs.find(({ state }) => uf === state);
   }
-
+  
   async function getApi() {
     try {
       const resp = await apiCovid.get("/api/report/v1");
@@ -56,7 +53,8 @@ export function SearchProvider({ children }: iSearchProviderProps) {
         setSearch,
         valueSearch,
         filterList,
-        findMapImg,
+        filterMap,
+        findMapImg
       }}
     >
       {children}

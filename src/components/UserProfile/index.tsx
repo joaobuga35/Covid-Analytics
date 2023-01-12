@@ -3,6 +3,7 @@ import { Button, CircularProgress } from "@mui/material";
 import { FavoriteCard } from "../FavoriteCard";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
+import { ImSad } from "react-icons/im";
 
 export function UserProfile() {
   const { favorites, waitFavorite, logedUser, logout } = useContext(UserContext);
@@ -41,13 +42,17 @@ export function UserProfile() {
           <CircularProgress color="info" />
         ) : (
           <ul>
-            {favorites.map((el) => (
+            { 
+            favorites.length?
+              favorites.map((el) => (
               <FavoriteCard
                 key={Math.random()}
                 name={el.data.state}
                 id={el.data.uid}
               />
-            ))}
+              )) :
+              <p>Você não adicionou nenhum favorito! <br/><ImSad/> </p>
+            }
           </ul>
         )}
       </UserFavoriteStyled>

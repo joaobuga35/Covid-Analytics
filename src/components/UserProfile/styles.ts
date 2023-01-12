@@ -50,6 +50,17 @@ export const SectionStyled = styled.section`
     background-color: var(--gray-1);
     height: 50%;
   }
+
+  p{
+    text-align: center;
+    line-height: 25px;
+    color: #858585;
+    font-family: var(--font-family-1);
+    >svg{
+      font-size: 35px;
+      margin-top:15px;
+    }
+  }
 `;
 
 export const UserStyled = styled.div`
