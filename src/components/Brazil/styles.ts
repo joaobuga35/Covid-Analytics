@@ -28,6 +28,7 @@ export const SectionStyled = styled.section`
   > picture {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
   }
 
   table {
@@ -70,9 +71,5 @@ export const ButtonContainerStyled = styled.div`
 
   @media (min-width: 1029px) {
     margin-bottom: 0;
-
-    > button {
-      margin-bottom: 30px;
-    }
   }
 `;
