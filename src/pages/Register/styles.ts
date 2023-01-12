@@ -102,7 +102,7 @@ export const RegisterStyled = styled.div`
 
 export const BodyStyled = createGlobalStyle`
   body {
-    background-position: 25%;
+    background-position: 75%;
     transition: 0.5s;
   }
 `;

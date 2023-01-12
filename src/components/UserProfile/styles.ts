@@ -27,7 +27,7 @@ export const SectionStyled = styled.section`
     margin-top: var(--margin-top-H2);
   }
 
-  & > div:nth-child(1) {
+  > div:nth-child(1) {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -39,7 +39,7 @@ export const SectionStyled = styled.section`
     height: 50%;
   }
 
-  & > div:nth-child(2) {
+  > div:nth-child(2) {
     display: flex;
     align-items: center;
     flex-direction: column;

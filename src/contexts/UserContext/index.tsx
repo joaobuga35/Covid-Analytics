@@ -71,7 +71,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         progress: undefined,
         theme: "light",
       });
-      FavoriteApiGet();
+      favoriteApiGet();
 
       if (response.data.accessToken) {
         localStorage.setItem("@TOKEN:", response.data.accessToken);
@@ -136,7 +136,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
     checkUser();
   }, []);
 
-  async function FavoriteApiGet() {
+  async function favoriteApiGet() {
     setWaitFavorite(true);
     try {
       const resp = await api.get(`favoriteIds?userId=${idUser}`, {
@@ -167,7 +167,7 @@ export function UserContextProvider({ children }: iContextProviderProps) {
         setLogedUser,
         loading,
         routesLoading,
-        FavoriteApiGet,
+        favoriteApiGet,
         waitFavorite,
         setWaitFavorite,
         favorites,

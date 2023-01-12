@@ -15,6 +15,7 @@ export function PieChart({ values, labels, title }: iPizza) {
     ],
     labels: labels,
   };
+  
   return (
     <div>
       <TitleChartStyled>{title}</TitleChartStyled>

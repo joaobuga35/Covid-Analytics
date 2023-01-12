@@ -27,7 +27,7 @@ export const GraphModalStyled = styled.div`
   display: flex;
   align-items: center;
 
-  & > div {
+  > div {
     margin: 0 auto;
     width: 90%;
     max-height: 600px;
@@ -63,7 +63,7 @@ export const GraphModalStyled = styled.div`
   }
 
   @media (min-width: 500px) {
-    & > div {
+    > div {
       margin: 0 auto;
       width: 90%;
       max-width: 675px;

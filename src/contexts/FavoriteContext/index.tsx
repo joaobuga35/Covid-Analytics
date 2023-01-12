@@ -17,27 +17,28 @@ export const FavoriteContext = createContext<iFavoriteContext>(
 
 export function FavoriteProvider({ children }: iFavoriteProviderProps) {
   const { states,findMapImg } = useContext(SearchContext);
-  const { FavoriteApiGet, favorites, setWaitFavorite } =
+  const { favoriteApiGet, favorites, setWaitFavorite } =
     useContext(UserContext);
 
   const [openModal, setOpenModal] = useState(false as boolean);
   const [dataModal, setDataModal] = useState([] as iDataUserGet[] | []);
 
   const token = localStorage.getItem("@TOKEN:");
+  
   useEffect(() => {
-    FavoriteApiGet();
+    favoriteApiGet();
   }, [token]);
 
-  async function FavoriteApiPost(dataUser: iDataUser) {
+  async function favoriteApiPost(dataUser: iDataUser) {
     setWaitFavorite(true);
     const token = localStorage.getItem("@TOKEN:");
     try {
-      const resp = await api.post("/favoriteIds", dataUser, {
+      await api.post("/favoriteIds", dataUser, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-      FavoriteApiGet();
+      favoriteApiGet();
     } catch (error) {
       console.error(error);
       setWaitFavorite(false);
@@ -65,7 +66,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
         return el.data.uid == uid;
       });
       if (!verification) {
-        FavoriteApiPost(dataUser);
+        favoriteApiPost(dataUser);
       } else {
         setWaitFavorite(false);
         toast.error("Estado já favoritado!", {
@@ -97,7 +98,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
           Authorization: `Bearer ${token}`,
         },
       });
-      FavoriteApiGet();
+      favoriteApiGet();
       setOpenModal(false);
     } catch (error) {
       console.error(error);

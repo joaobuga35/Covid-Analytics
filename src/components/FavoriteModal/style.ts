@@ -11,7 +11,7 @@ export const ModalStyled = styled.section`
   display: flex;
   align-items: center;
 
-  & > div {
+  > div {
     margin: 0 auto;
     width: 70%;
     background-color: white;
@@ -21,7 +21,7 @@ export const ModalStyled = styled.section`
   }
 
   @media (min-width: 500px) {
-    & > div {
+    > div {
       margin: 0 auto;
       width: 70%;
       max-width: 600px;

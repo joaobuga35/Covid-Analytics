@@ -5,7 +5,7 @@ export const FavoriteStyled = styled.section`
   flex-direction: column;
   padding-bottom: 20px;
 
-  & > section > div:first-of-type {
+  > section > div:first-of-type {
     width: 277px;
     height: 265px;
     background: var(--white);
@@ -24,13 +24,13 @@ export const FavoriteStyled = styled.section`
     gap: 20px;
   }
 
-  & > h2 {
+  > h2 {
     font-size: var(--title-2);
     color: var(--gray-3);
     font-family: var(--font-family-1);
   }
 
-  & > button:nth-child(1) {
+  > button:nth-child(1) {
     width: 29px;
     height: 29px;
     border-radius: 100%;
@@ -43,8 +43,7 @@ export const FavoriteStyled = styled.section`
   div button:nth-child(2) {
     transform: translateY(17px);
   }
-  div > button:nth-child(2),
-  .iconContainer {
+  div > button:nth-child(2), .iconContainer {
     width: 100%;
     height: 36px;
     background-color: #25d366;

@@ -70,5 +70,9 @@ export const ButtonContainerStyled = styled.div`
 
   @media (min-width: 1029px) {
     margin-bottom: 0;
+
+    > button {
+      margin-bottom: 30px;
+    }
   }
 `;

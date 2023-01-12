@@ -8,7 +8,7 @@ export const SearchStyled = styled.section`
   border-radius: var(--radius-3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  & > h2 {
+  > h2 {
     font-family: var(--font-family-1);
     font-size: var(--title-2);
     font-weight: 700;

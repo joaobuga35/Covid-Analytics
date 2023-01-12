@@ -55,13 +55,12 @@ export const ListStyled = styled.ul`
   }
 
   @media (min-width: 720px) {
-    & {
-      flex-wrap: wrap;
-      max-height: 640px;
-      justify-content: center;
-      overflow-x:hidden ;
-      margin: 26px 0;
-    }
+    flex-wrap: wrap;
+    max-height: 640px;
+    justify-content: center;
+    overflow-x:hidden ;
+    margin: 26px 0;
+    
 
     li {
       flex: 1 300px;

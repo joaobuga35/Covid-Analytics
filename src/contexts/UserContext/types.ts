@@ -31,7 +31,7 @@ export interface iUserProviderValue {
   setLogedUser: (logedUser: iLogedUser) => void;
   loading: boolean;
   routesLoading: boolean;
-  FavoriteApiGet: () => void;
+  favoriteApiGet: () => void;
   waitFavorite: boolean;
   setWaitFavorite: (waitFavorite: boolean) => void;
   favorites: iDataUserGet[];
