@@ -24,7 +24,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
   const [dataModal, setDataModal] = useState([] as iDataUserGet[] | []);
 
   const token = localStorage.getItem("@TOKEN:");
-  
+
   useEffect(() => {
     favoriteApiGet();
   }, [token]);
@@ -48,7 +48,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
   function searchFavoriteId(id: number) {
     setWaitFavorite(true);
     const idUser = localStorage.getItem("@USER_ID:");
-    const filter = states.find((el: iStates) => el.uid == id);
+    const filter = states.find((el: iStates) => el.uid === id);
     if (filter) {
       const { uf, state, cases, deaths, suspects, uid } = filter;
       const dataUser = {
@@ -63,7 +63,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
         userId: Number(idUser),
       };
       const verification = favorites.find((el) => {
-        return el.data.uid == uid;
+        return el.data.uid === uid;
       });
       if (!verification) {
         favoriteApiPost(dataUser);
@@ -84,7 +84,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
   }
 
   function filterFavorite(id: number) {
-    const filter = favorites.filter((el) => el.data.uid == id);
+    const filter = favorites.filter((el) => el.data.uid === id);
     setDataModal(filter)
     findMapImg(filter[0].data.uf);
     setOpenModal(true);
@@ -93,7 +93,7 @@ export function FavoriteProvider({ children }: iFavoriteProviderProps) {
   async function deleteFavoriteId(id: number) {
     const token = localStorage.getItem("@TOKEN:");
     try {
-      const resp = await api.delete(`favoriteIds/${id}`, {
+      await api.delete(`favoriteIds/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
