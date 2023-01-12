@@ -32,7 +32,6 @@ export function ChartProvider({ children }: iChartProvider) {
   }, []);
 
   function showHistoryCasesBrazil(data: iBrazilHistoryData[]) {
-    console.log("passei");
     let currDay = "";
     let counter = 0;
     const historyCases: Array<iDataBrazilHandle> = [];

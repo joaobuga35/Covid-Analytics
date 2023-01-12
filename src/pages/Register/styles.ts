@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 export const RegisterStyled = styled.div`
   width: 100%;
-  height: 160vh;
+  height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;

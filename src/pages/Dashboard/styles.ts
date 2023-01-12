@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const DashboardStyled = styled.div`
   background-color: var(--white);
+  padding-bottom: 50px;
   main {
     margin: 0 auto;
     display: flex;
@@ -18,8 +19,13 @@ export const DashboardStyled = styled.div`
     main {
       flex-direction: row;
       align-items: stretch;
-      margin-bottom: 25px;
       justify-content: center;
     }
+  }
+`;
+
+export const BodyStyled = createGlobalStyle`
+  body {
+    background-color: var(--white);
   }
 `;
