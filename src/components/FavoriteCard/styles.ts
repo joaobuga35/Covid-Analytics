@@ -13,6 +13,7 @@ export const FavoriteCardStyled = styled.li`
     color: var(--gray-3);
     font-family: var(--font-family-1);
     font-weight: 700;
+    width: 70%;
     font-size: 15px;
     line-height: 18px;
     overflow: hidden;

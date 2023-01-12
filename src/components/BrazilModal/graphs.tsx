@@ -22,19 +22,19 @@ export function RenderGraphs() {
   } = useContext(ChartContext);
   const [show, setShow] = useState(false);
   const { states } = useContext(SearchContext);
-  const [render, setRender] = useState(states)
+  const [render, setRender] = useState(states);
   useEffect(() => {
     if (brazilCases) {
       setShow(true);
     }
   }, [brazilCases]);
 
-  function filterState(state: string){
-    if(state === "Todos"){
-      setRender(states)
+  function filterState(state: string) {
+    if (state === "Todos") {
+      setRender(states);
     } else {
-      const filteredStatesList = states.filter(uf => state === uf.uf)
-      setRender(filteredStatesList)
+      const filteredStatesList = states.filter((uf) => state === uf.uf);
+      setRender(filteredStatesList);
     }
   }
 
